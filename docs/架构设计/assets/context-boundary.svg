@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <defs>
+    <marker id="arr4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5A6A7A"/>
+    </marker>
+    <marker id="arr4b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#B07A2A"/>
+    </marker>
+    <filter id="sh4" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <rect width="1180" height="560" fill="#FAFBFC"/>
+  <text x="590" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1F2D3D">系统上下文与外部边界图（C4-L1）</text>
+  <text x="590" y="64" text-anchor="middle" font-size="13" fill="#7A8794">实线 = 首版人工链路　│　虚线 = 二期预留接口（MVP 不实现）</text>
+
+  <!-- 系统核心 -->
+  <rect x="390" y="200" width="400" height="160" rx="14" fill="#EAF7EE" stroke="#2A6B45" stroke-width="2.5" filter="url(#sh4)"/>
+  <text x="590" y="250" text-anchor="middle" font-size="18" font-weight="bold" fill="#1B5E38">BLACK ERP</text>
+  <text x="590" y="276" text-anchor="middle" font-size="12" fill="#2A6B45">抖店电商团队内部协同系统</text>
+  <text x="590" y="302" text-anchor="middle" font-size="13" fill="#2A6B45">成本自动核算 · 利润自动计算 · 权限分级</text>
+  <text x="590" y="326" text-anchor="middle" font-size="12" fill="#5A7A68">主数据(编码) → 店铺登记 → 订单匹配 → 汇总日报</text>
+  <text x="590" y="348" text-anchor="middle" font-size="12" fill="#8AA396">单体部署 · Windows 本地 · 数据不出本机</text>
+
+  <!-- 左上：用户 -->
+  <rect x="90" y="100" width="240" height="120" rx="10" fill="#E8F1FD" stroke="#7FA3D4" stroke-width="1.5" filter="url(#sh4)"/>
+  <text x="210" y="130" text-anchor="middle" font-size="14" font-weight="bold" fill="#24405F">内部用户（PC 浏览器）</text>
+  <text x="210" y="156" text-anchor="middle" font-size="12" fill="#5A6A7A">老板 · 管理员 · 客服</text>
+  <text x="210" y="176" text-anchor="middle" font-size="12" fill="#5A6A7A">采购 · 运营 · 财务</text>
+  <text x="210" y="200" text-anchor="middle" font-size="11" fill="#8098B0">独立账号登录 · 模块权限裁剪</text>
+
+  <line x1="330" y1="170" x2="400" y2="220" stroke="#5A6A7A" stroke-width="1.8" marker-end="url(#arr4)"/>
+  <text x="345" y="188" font-size="11.5" fill="#5A6A7A">HTTPS 操作</text>
+  <line x1="390" y1="300" x2="320" y2="200" stroke="#5A6A7A" stroke-width="1.5" marker-end="url(#arr4)" opacity="0.0"/>
+
+  <!-- 左下：抖店后台 -->
+  <rect x="90" y="340" width="240" height="120" rx="10" fill="#FDF0E3" stroke="#D9A05C" stroke-width="1.5" filter="url(#sh4)"/>
+  <text x="210" y="372" text-anchor="middle" font-size="14" font-weight="bold" fill="#8A5316">抖店后台</text>
+  <text x="210" y="398" text-anchor="middle" font-size="12" fill="#8A5316">订单导出 CSV（人工）</text>
+  <text x="210" y="420" text-anchor="middle" font-size="12" fill="#8A5316">成本表 XLSX 固定模板</text>
+  <text x="210" y="444" text-anchor="middle" font-size="11" fill="#A07040">首版不做 API 对接</text>
+
+  <line x1="330" y1="380" x2="390" y2="300" stroke="#B07A2A" stroke-width="1.8" marker-end="url(#arr4b)"/>
+  <text x="320" y="348" font-size="11.5" fill="#B07A2A">人工导出→上传</text>
+
+  <!-- 右上：导出流向 -->
+  <rect x="850" y="100" width="240" height="120" rx="10" fill="#F3F6F9" stroke="#9FB0C0" stroke-width="1.5" filter="url(#sh4)"/>
+  <text x="970" y="132" text-anchor="middle" font-size="14" font-weight="bold" fill="#3D4E5F">人工流转</text>
+  <text x="970" y="158" text-anchor="middle" font-size="12" fill="#5A6A7A">汇总/明细/未匹配 XLSX 导出</text>
+  <text x="970" y="180" text-anchor="middle" font-size="12" fill="#5A6A7A">经营日报页面版</text>
+  <text x="970" y="204" text-anchor="middle" font-size="11" fill="#8A98A8">老板/财务查阅 · 二次加工</text>
+
+  <line x1="790" y1="240" x2="850" y2="180" stroke="#5A6A7A" stroke-width="1.8" marker-end="url(#arr4)"/>
+  <text x="812" y="222" font-size="11.5" fill="#5A6A7A">导出</text>
+
+  <!-- 右中：OCR 二期 -->
+  <rect x="850" y="250" width="240" height="100" rx="10" fill="#F9F5FF" stroke="#B49BD8" stroke-width="1.5" stroke-dasharray="7 4" filter="url(#sh4)"/>
+  <text x="970" y="282" text-anchor="middle" font-size="14" font-weight="bold" fill="#5A3D8A">OCR 服务（二期）</text>
+  <text x="970" y="306" text-anchor="middle" font-size="12" fill="#6A5590">PaddleOCR / 云 API</text>
+  <text x="970" y="328" text-anchor="middle" font-size="11" fill="#8A75B0">OcrProvider 接口预留 · 失败降级手录</text>
+
+  <line x1="790" y1="280" x2="850" y2="290" stroke="#B49BD8" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#arr4)"/>
+
+  <!-- 右下：推送二期 -->
+  <rect x="850" y="380" width="240" height="100" rx="10" fill="#F9F5FF" stroke="#B49BD8" stroke-width="1.5" stroke-dasharray="7 4" filter="url(#sh4)"/>
+  <text x="970" y="412" text-anchor="middle" font-size="14" font-weight="bold" fill="#5A3D8A">微信/短信网关（二期）</text>
+  <text x="970" y="436" text-anchor="middle" font-size="12" fill="#6A5590">发票提醒 · 日报推送</text>
+  <text x="970" y="458" text-anchor="middle" font-size="11" fill="#8A75B0">NotifyProvider 插件 · MVP 仅站内</text>
+
+  <line x1="790" y1="330" x2="850" y2="410" stroke="#B49BD8" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#arr4)"/>
+
+  <!-- 底部红线 -->
+  <rect x="90" y="490" width="1000" height="46" rx="8" fill="#FDECEC" stroke="#D98080" stroke-dasharray="6 4"/>
+  <text x="590" y="518" text-anchor="middle" font-size="12.5" fill="#8A3030">技术红线：不直连抖店 API · 不做消息通道自研 · 不做多租户 SaaS · 首期不做移动端H5（二期小程序） · 外部集成一律走 Provider 接口</text>
+</svg>

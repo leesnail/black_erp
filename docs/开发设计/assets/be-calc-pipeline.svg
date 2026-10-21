@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780" font-family="Microsoft YaHei, PingFang SC, sans-serif"><defs><marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#909399"/></marker></defs><rect width="1280" height="780" fill="#FFFFFF"/><text x="640" y="36" font-size="20" fill="#303133" text-anchor="middle" font-weight="bold">FR-FIN/FR-CALC 计算流水线（Celery Worker 内部）</text>
+<rect x="40" y="80" width="170" height="110" rx="10" fill="#fff" stroke="#409EFF" stroke-width="2"/>
+<rect x="40" y="80" width="170" height="30" rx="10" fill="#409EFF"/>
+<rect x="40" y="98" width="170" height="12" rx="0" fill="#409EFF"/>
+<text x="125" y="101" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">① 领取任务</text>
+<text x="50" y="128" font-size="11" fill="#606266" text-anchor="start">Redis 锁 batch:{id}</text>
+<text x="50" y="146" font-size="11" fill="#606266" text-anchor="start">状态 pending→running</text>
+<rect x="230" y="80" width="170" height="110" rx="10" fill="#fff" stroke="#67C23A" stroke-width="2"/>
+<rect x="230" y="80" width="170" height="30" rx="10" fill="#67C23A"/>
+<rect x="230" y="98" width="170" height="12" rx="0" fill="#67C23A"/>
+<text x="315" y="101" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">② 加载上下文</text>
+<text x="240" y="128" font-size="11" fill="#606266" text-anchor="start">ShopProduct(启用)</text>
+<text x="240" y="146" font-size="11" fill="#606266" text-anchor="start">MatchRule · RegionRule</text>
+<text x="240" y="164" font-size="11" fill="#606266" text-anchor="start">CostPrice 快照索引</text>
+<rect x="420" y="80" width="170" height="110" rx="10" fill="#fff" stroke="#E6A23C" stroke-width="2"/>
+<rect x="420" y="80" width="170" height="30" rx="10" fill="#E6A23C"/>
+<rect x="420" y="98" width="170" height="12" rx="0" fill="#E6A23C"/>
+<text x="505" y="101" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">③ CSV 解析</text>
+<text x="430" y="128" font-size="11" fill="#606266" text-anchor="start">pandas read_csv</text>
+<text x="430" y="146" font-size="11" fill="#606266" text-anchor="start">utf-8-sig / chunksize</text>
+<text x="430" y="164" font-size="11" fill="#606266" text-anchor="start">店铺=文件名前2字</text>
+<rect x="610" y="80" width="170" height="110" rx="10" fill="#fff" stroke="#606266" stroke-width="2"/>
+<rect x="610" y="80" width="170" height="30" rx="10" fill="#606266"/>
+<rect x="610" y="98" width="170" height="12" rx="0" fill="#606266"/>
+<text x="695" y="101" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">④ 行过滤</text>
+<text x="620" y="128" font-size="11" fill="#606266" text-anchor="start">快递信息空/- 跳过</text>
+<text x="620" y="146" font-size="11" fill="#606266" text-anchor="start">售后行保留计成本</text>
+<text x="620" y="164" font-size="11" fill="#606266" text-anchor="start">qty异常→parse_errors</text>
+<rect x="800" y="80" width="170" height="110" rx="10" fill="#fff" stroke="#7B61FF" stroke-width="2"/>
+<rect x="800" y="80" width="170" height="30" rx="10" fill="#7B61FF"/>
+<rect x="800" y="98" width="170" height="12" rx="0" fill="#7B61FF"/>
+<text x="885" y="101" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">⑤ 匹配引擎</text>
+<text x="810" y="128" font-size="11" fill="#606266" text-anchor="start">预处理拆分→倒排召回</text>
+<text x="810" y="146" font-size="11" fill="#606266" text-anchor="start">四级打分→auto/manual/none</text>
+<text x="810" y="164" font-size="11" fill="#606266" text-anchor="start">见 be-match-detail</text>
+<rect x="990" y="80" width="170" height="110" rx="10" fill="#fff" stroke="#D9534F" stroke-width="2"/>
+<rect x="990" y="80" width="170" height="30" rx="10" fill="#D9534F"/>
+<rect x="990" y="98" width="170" height="12" rx="0" fill="#D9534F"/>
+<text x="1075" y="101" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">⑥ 成本聚合</text>
+<text x="1000" y="128" font-size="11" fill="#606266" text-anchor="start">unit=price_snap+surcharge</text>
+<text x="1000" y="146" font-size="11" fill="#606266" text-anchor="start">line=unit×qty</text>
+<text x="1000" y="164" font-size="11" fill="#606266" text-anchor="start">Decimal 四舍五入分</text>
+<line x1="210" y1="135" x2="230" y2="135" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="400" y1="135" x2="420" y2="135" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="590" y1="135" x2="610" y2="135" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="780" y1="135" x2="800" y2="135" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="970" y1="135" x2="990" y2="135" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="230" width="600" height="200" rx="10" fill="#EAF7EE" stroke="#1B5E38" stroke-width="1"/>
+<text x="64" y="260" font-size="15" fill="#1B5E38" text-anchor="start" font-weight="bold">批次汇总公式（写入 Batch.stats）</text>
+<text x="64" y="292" font-size="13" fill="#303133" text-anchor="start">income_total   = Σ line.income          （全部可计算行，含售后）</text>
+<text x="64" y="314" font-size="13" fill="#303133" text-anchor="start">ship_count     = COUNT(有物流行)</text>
+<text x="64" y="336" font-size="13" fill="#303133" text-anchor="start">aftersale_cnt  = COUNT(aftersale_status != &quot;&quot;)   仅展示</text>
+<text x="64" y="358" font-size="13" fill="#303133" text-anchor="start">cost_total     = Σ line.line_cost      （matched != none）</text>
+<text x="64" y="380" font-size="13" fill="#303133" text-anchor="start">profit         = income_total − cost_total</text>
+<text x="64" y="402" font-size="13" fill="#303133" text-anchor="start">unmatched_cnt  = COUNT(matched == none)</text>
+<rect x="40" y="450" width="600" height="160" rx="10" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="64" y="480" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">落库策略</text>
+<text x="64" y="510" font-size="12" fill="#606266" text-anchor="start">· OrderLine 分片 executemany，每片 1000 行</text>
+<text x="64" y="532" font-size="12" fill="#606266" text-anchor="start">· 全部写完后 UPDATE Batch.stats + status=success</text>
+<text x="64" y="554" font-size="12" fill="#606266" text-anchor="start">· 失败：整体回滚该批 OrderLine（TRUNCATE by batch_id）→ status=failed</text>
+<text x="64" y="576" font-size="12" fill="#606266" text-anchor="start">· 重试：celery autoretry_for=(Exception,), max_retries=3</text>
+<text x="64" y="598" font-size="12" fill="#606266" text-anchor="start">· 目标：1 万行 ≤ 30s（NFR-07），匹配纯内存无逐行查库</text>
+<rect x="680" y="230" width="560" height="380" rx="10" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="704" y="260" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">结果分支（按 matched 状态）</text>
+<rect x="710" y="290" width="170" height="90" rx="8" fill="#fff" stroke="#67C23A" stroke-width="2"/>
+<text x="795" y="314" font-size="13" fill="#67C23A" text-anchor="middle" font-weight="bold">matched=auto</text>
+<text x="795" y="336" font-size="11" fill="#606266" text-anchor="middle">自动落 spec_id</text>
+<text x="795" y="352" font-size="11" fill="#606266" text-anchor="middle">cost 正常计入</text>
+<rect x="900" y="290" width="170" height="90" rx="8" fill="#fff" stroke="#409EFF" stroke-width="2"/>
+<text x="985" y="314" font-size="13" fill="#409EFF" text-anchor="middle" font-weight="bold">matched=manual</text>
+<text x="985" y="336" font-size="11" fill="#606266" text-anchor="middle">人工指定后回填</text>
+<text x="985" y="352" font-size="11" fill="#606266" text-anchor="middle">写 MatchRule 沉淀</text>
+<rect x="710" y="400" width="170" height="90" rx="8" fill="#fff" stroke="#D9534F" stroke-width="2"/>
+<text x="795" y="424" font-size="13" fill="#D9534F" text-anchor="middle" font-weight="bold">matched=none</text>
+<text x="795" y="446" font-size="11" fill="#606266" text-anchor="middle">进未匹配清单</text>
+<text x="795" y="462" font-size="11" fill="#606266" text-anchor="middle">cost 不计入·单独披露</text>
+<text x="795" y="478" font-size="11" fill="#606266" text-anchor="middle">顶部推荐 top-N 候选</text>
+<rect x="900" y="400" width="170" height="90" rx="8" fill="#fff" stroke="#E6A23C" stroke-width="2"/>
+<text x="985" y="424" font-size="13" fill="#E6A23C" text-anchor="middle" font-weight="bold">ignored=true</text>
+<text x="985" y="446" font-size="11" fill="#606266" text-anchor="middle">财务显式忽略</text>
+<text x="985" y="462" font-size="11" fill="#606266" text-anchor="middle">填原因·审计留痕</text>
+<text x="985" y="478" font-size="11" fill="#606266" text-anchor="middle">不计成本</text>
+<text x="960" y="540" font-size="12" fill="#909399" text-anchor="middle">未匹配清零或全部忽略后批次可 settled</text>
+<line x1="1160" y1="190" x2="1160" y2="230" stroke="#D9534F" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="1160" y1="190" x2="720" y2="230" stroke="#67C23A" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="640" width="1200" height="110" rx="10" fill="#F5F7FA" stroke="#E4E7ED" stroke-width="1"/>
+<text x="64" y="670" font-size="14" fill="#303133" text-anchor="start" font-weight="bold">⑤ 匹配引擎四级打分（详见 07-匹配算法设计.md）</text>
+<rect x="64" y="690" width="280" height="44" rx="6" fill="#fff" stroke="#1B5E38" stroke-width="1"/>
+<text x="78" y="710" font-size="12" fill="#1B5E38" text-anchor="start" font-weight="bold">P0 MatchRule 精确</text>
+<text x="78" y="726" font-size="11" fill="#606266" text-anchor="start">title_norm 全等</text>
+<rect x="364" y="690" width="280" height="44" rx="6" fill="#fff" stroke="#409EFF" stroke-width="1"/>
+<text x="378" y="710" font-size="12" fill="#409EFF" text-anchor="start" font-weight="bold">P1 规格+售价</text>
+<text x="378" y="726" font-size="11" fill="#606266" text-anchor="start">spec_text 全等 且 售价±0.01</text>
+<rect x="664" y="690" width="280" height="44" rx="6" fill="#fff" stroke="#E6A23C" stroke-width="1"/>
+<text x="678" y="710" font-size="12" fill="#E6A23C" text-anchor="start" font-weight="bold">P2 最长命中+售价</text>
+<text x="678" y="726" font-size="11" fill="#606266" text-anchor="start">keyword 命中长度最长 且 售价一致</text>
+<rect x="964" y="690" width="280" height="44" rx="6" fill="#fff" stroke="#606266" stroke-width="1"/>
+<text x="978" y="710" font-size="12" fill="#606266" text-anchor="start" font-weight="bold">P3 仅最长命中</text>
+<text x="978" y="726" font-size="11" fill="#606266" text-anchor="start">弱命中·只推荐不自动落库</text>
+</svg>

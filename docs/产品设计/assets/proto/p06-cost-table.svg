@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Microsoft YaHei, PingFang SC, sans-serif"><rect width="1280" height="800" fill="#FFFFFF"/><rect x="0" y="0" width="1280" height="56" rx="0" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="1280" y2="56" stroke="#E4E7ED" stroke-width="1"/>
+<text x="16" y="36" font-size="18" fill="#1B5E38" text-anchor="start" font-weight="bold">BLACK ERP</text>
+<rect x="1058" y="12" width="96" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1072" y="33" font-size="12" fill="#606266" text-anchor="start">消息 3</text>
+<circle cx="1186" cy="28" r="13" fill="#1B5E38"/>
+<text x="1186" y="33" font-size="11" fill="#fff" text-anchor="middle">王</text>
+<text x="1206" y="33" font-size="12" fill="#606266" text-anchor="start">王老板 ▾</text>
+<rect x="0" y="56" width="200" height="744" rx="0" fill="#1F2D3D"/>
+<text x="16" y="84" font-size="11" fill="#8A98A8" text-anchor="start">工作台</text>
+<text x="20" y="109" font-size="12" fill="#C0C4CC" text-anchor="start">工作台</text>
+<text x="16" y="138" font-size="11" fill="#8A98A8" text-anchor="start">客服工作台</text>
+<text x="20" y="163" font-size="12" fill="#C0C4CC" text-anchor="start">售后登记</text>
+<text x="20" y="190" font-size="12" fill="#C0C4CC" text-anchor="start">供应商对接</text>
+<text x="20" y="217" font-size="12" fill="#C0C4CC" text-anchor="start">发票管理</text>
+<text x="16" y="246" font-size="11" fill="#8A98A8" text-anchor="start">成本报价</text>
+<text x="20" y="271" font-size="12" fill="#C0C4CC" text-anchor="start">供应商管理</text>
+<rect x="6" y="281" width="188" height="25" rx="4" fill="#2A6B45"/>
+<text x="20" y="298" font-size="12" fill="#FFFFFF" text-anchor="start" font-weight="bold">规格成本表</text>
+<text x="20" y="325" font-size="12" fill="#C0C4CC" text-anchor="start">报价录入</text>
+<text x="20" y="352" font-size="12" fill="#C0C4CC" text-anchor="start">模板导入</text>
+<text x="16" y="381" font-size="11" fill="#8A98A8" text-anchor="start">运营管理</text>
+<text x="20" y="406" font-size="12" fill="#C0C4CC" text-anchor="start">店铺产品登记</text>
+<text x="20" y="433" font-size="12" fill="#C0C4CC" text-anchor="start">成本表(只读)</text>
+<text x="20" y="460" font-size="12" fill="#C0C4CC" text-anchor="start">ROI 计算</text>
+<text x="16" y="489" font-size="11" fill="#8A98A8" text-anchor="start">财务核算</text>
+<text x="20" y="514" font-size="12" fill="#C0C4CC" text-anchor="start">订单上传与计算</text>
+<text x="20" y="541" font-size="12" fill="#C0C4CC" text-anchor="start">计算批次</text>
+<text x="20" y="568" font-size="12" fill="#C0C4CC" text-anchor="start">未匹配处理</text>
+<text x="20" y="595" font-size="12" fill="#C0C4CC" text-anchor="start">经营日报</text>
+<text x="16" y="624" font-size="11" fill="#8A98A8" text-anchor="start">经营驾驶舱</text>
+<text x="20" y="649" font-size="12" fill="#C0C4CC" text-anchor="start">利润总览</text>
+<text x="20" y="676" font-size="12" fill="#C0C4CC" text-anchor="start">日报中心</text>
+<text x="16" y="705" font-size="11" fill="#8A98A8" text-anchor="start">系统管理</text>
+<text x="20" y="730" font-size="12" fill="#C0C4CC" text-anchor="start">账号管理</text>
+<text x="20" y="757" font-size="12" fill="#C0C4CC" text-anchor="start">角色与权限</text>
+<text x="20" y="784" font-size="12" fill="#C0C4CC" text-anchor="start">附加成本规则</text>
+<text x="20" y="811" font-size="12" fill="#C0C4CC" text-anchor="start">操作日志</text>
+<text x="224" y="96" font-size="18" fill="#303133" text-anchor="start" font-weight="bold">规格成本表</text>
+<rect x="1202" y="78" width="54" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1229" y="98" font-size="12" fill="#606266" text-anchor="middle">导出</text>
+<rect x="1166" y="78" width="80" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1206" y="98" font-size="12" fill="#606266" text-anchor="middle">下载模板</text>
+<rect x="1130" y="78" width="106" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1183" y="98" font-size="12" fill="#606266" text-anchor="middle">导入XLSX</text>
+<rect x="1120" y="78" width="106" height="32" rx="4" fill="#1B5E38"/>
+<text x="1173" y="98" font-size="12" fill="#fff" text-anchor="middle">+ 新增规格</text>
+<rect x="224" y="128" width="280" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="148" font-size="12" fill="#909399" text-anchor="start">搜索 编码 / 产品名 / 供应商</text>
+<rect x="516" y="128" width="150" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="526" y="148" font-size="12" fill="#909399" text-anchor="start">供应商 ▾</text>
+<rect x="678" y="128" width="130" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="688" y="148" font-size="12" fill="#909399" text-anchor="start">状态 ▾</text>
+<rect x="820" y="128" width="72" height="32" rx="4" fill="#1B5E38"/>
+<text x="856" y="148" font-size="12" fill="#fff" text-anchor="middle">查询</text>
+<rect x="224" y="184" width="1032" height="172" rx="0" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<rect x="224" y="184" width="1032" height="36" rx="0" fill="#F5F7FA"/>
+<line x1="224" y1="220" x2="1256" y2="220" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="207" font-size="12" fill="#606266" text-anchor="start">☑</text>
+<line x1="268" y1="184" x2="268" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="278" y="207" font-size="12" fill="#606266" text-anchor="start">规格编码</text>
+<line x1="398" y1="184" x2="398" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="408" y="207" font-size="12" fill="#606266" text-anchor="start">产品名称</text>
+<line x1="638" y1="184" x2="638" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="648" y="207" font-size="12" fill="#606266" text-anchor="start">规格</text>
+<line x1="768" y1="184" x2="768" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="778" y="207" font-size="12" fill="#606266" text-anchor="start">拿货价</text>
+<line x1="878" y1="184" x2="878" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="888" y="207" font-size="12" fill="#606266" text-anchor="start">供应商</text>
+<line x1="1008" y1="184" x2="1008" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1018" y="207" font-size="12" fill="#606266" text-anchor="start">更新时间</text>
+<line x1="1138" y1="184" x2="1138" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1148" y="207" font-size="12" fill="#606266" text-anchor="start">操作</text>
+<text x="234" y="242" font-size="12" fill="#303133" text-anchor="start">☐</text>
+<text x="278" y="242" font-size="12" fill="#303133" text-anchor="start">SP000123</text>
+<text x="408" y="242" font-size="12" fill="#303133" text-anchor="start">香葱椒盐月饼</text>
+<text x="648" y="242" font-size="12" fill="#303133" text-anchor="start">60g×10枚</text>
+<text x="778" y="242" font-size="12" fill="#303133" text-anchor="start">32.00</text>
+<text x="888" y="242" font-size="12" fill="#303133" text-anchor="start">誉恒源</text>
+<text x="1018" y="242" font-size="12" fill="#303133" text-anchor="start">2026-08-12</text>
+<text x="1148" y="242" font-size="12" fill="#303133" text-anchor="start">编辑 历史</text>
+<line x1="224" y1="254" x2="1256" y2="254" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="276" font-size="12" fill="#303133" text-anchor="start">☐</text>
+<text x="278" y="276" font-size="12" fill="#303133" text-anchor="start">SP000124</text>
+<text x="408" y="276" font-size="12" fill="#303133" text-anchor="start">香葱椒盐月饼</text>
+<text x="648" y="276" font-size="12" fill="#303133" text-anchor="start">60g×15枚</text>
+<text x="778" y="276" font-size="12" fill="#303133" text-anchor="start">45.00</text>
+<text x="888" y="276" font-size="12" fill="#303133" text-anchor="start">誉恒源</text>
+<text x="1018" y="276" font-size="12" fill="#303133" text-anchor="start">2026-08-12</text>
+<text x="1148" y="276" font-size="12" fill="#303133" text-anchor="start">编辑 历史</text>
+<line x1="224" y1="288" x2="1256" y2="288" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="310" font-size="12" fill="#303133" text-anchor="start">☐</text>
+<text x="278" y="310" font-size="12" fill="#303133" text-anchor="start">SP000125</text>
+<text x="408" y="310" font-size="12" fill="#303133" text-anchor="start">蛋黄莲蓉月饼</text>
+<text x="648" y="310" font-size="12" fill="#303133" text-anchor="start">60g×8枚</text>
+<text x="778" y="310" font-size="12" fill="#303133" text-anchor="start">38.00</text>
+<text x="888" y="310" font-size="12" fill="#303133" text-anchor="start">甜品坊</text>
+<text x="1018" y="310" font-size="12" fill="#303133" text-anchor="start">2026-08-18</text>
+<text x="1148" y="310" font-size="12" fill="#303133" text-anchor="start">编辑 历史</text>
+<line x1="224" y1="322" x2="1256" y2="322" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="344" font-size="12" fill="#303133" text-anchor="start">☐</text>
+<text x="278" y="344" font-size="12" fill="#303133" text-anchor="start">SP000131</text>
+<text x="408" y="344" font-size="12" fill="#303133" text-anchor="start">海苔肉松饼</text>
+<text x="648" y="344" font-size="12" fill="#303133" text-anchor="start">60g×12枚</text>
+<text x="778" y="344" font-size="12" fill="#303133" text-anchor="start">36.50</text>
+<text x="888" y="344" font-size="12" fill="#303133" text-anchor="start">誉恒源</text>
+<text x="1018" y="344" font-size="12" fill="#303133" text-anchor="start">2026-08-15</text>
+<text x="1148" y="344" font-size="12" fill="#303133" text-anchor="start">编辑 历史</text>
+<text x="1256" y="378" font-size="12" fill="#909399" text-anchor="end">共 86 条   ‹  1  2  3  4  5  ›</text>
+<rect x="200" y="56" width="1080" height="744" rx="0" fill="#000000" opacity="0.28"/>
+<rect x="840" y="56" width="440" height="744" rx="0" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="860" y="92" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">新增规格</text>
+<line x1="840" y1="110" x2="1280" y2="110" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1246" y="92" font-size="14" fill="#909399" text-anchor="start">✕</text>
+<text x="860" y="136" font-size="13" fill="#1B5E38" text-anchor="start" font-weight="bold">📷 拍照 / 截图识别（OCR，二期）</text>
+<line x1="840" y1="154" x2="1280" y2="154" stroke="#E4E7ED" stroke-width="1"/>
+<text x="860" y="192" font-size="12" fill="#606266" text-anchor="start">产品名称 *</text>
+<rect x="860" y="202" width="400" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="870" y="222" font-size="12" fill="#303133" text-anchor="start">香葱椒盐月饼</text>
+<text x="860" y="262" font-size="12" fill="#606266" text-anchor="start">规格名 *</text>
+<rect x="860" y="272" width="400" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="870" y="292" font-size="12" fill="#303133" text-anchor="start">60g×10枚</text>
+<text x="860" y="334" font-size="12" fill="#606266" text-anchor="start">默认供应商 *</text>
+<rect x="860" y="344" width="400" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="870" y="364" font-size="12" fill="#303133" text-anchor="start">誉恒源 ▾</text>
+<text x="860" y="390" font-size="12" fill="#606266" text-anchor="start">本版拿货价 *</text>
+<rect x="860" y="400" width="200" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="870" y="420" font-size="12" fill="#303133" text-anchor="start">32.00</text>
+<text x="1072" y="424" font-size="12" fill="#606266" text-anchor="start">元</text>
+<text x="860" y="460" font-size="12" fill="#606266" text-anchor="start">产品图片</text>
+<rect x="860" y="470" width="120" height="90" rx="6" fill="#F5F7FA" stroke="#E4E7ED" stroke-width="1"/>
+<text x="920" y="522" font-size="13" fill="#909399" text-anchor="middle">＋ 上传</text>
+<rect x="860" y="578" width="400" height="44" rx="6" fill="#EAF7EE" stroke="#1B5E38" stroke-width="1"/>
+<text x="874" y="605" font-size="12" fill="#2A6B45" text-anchor="start">保存后自动生成规格编码，编码不可修改</text>
+<line x1="840" y1="736" x2="1280" y2="736" stroke="#E4E7ED" stroke-width="1"/>
+<rect x="1030" y="750" width="100" height="34" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1080" y="771" font-size="12" fill="#606266" text-anchor="middle">取消</text>
+<rect x="1140" y="750" width="120" height="34" rx="4" fill="#1B5E38"/>
+<text x="1200" y="771" font-size="12" fill="#fff" text-anchor="middle">保存并生成编码</text>
+</svg>

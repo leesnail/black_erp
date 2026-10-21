@@ -1,0 +1,12 @@
+# frp 服务端配置（放在有公网 IP 的服务器）
+bindAddr = "0.0.0.0"
+bindPort = 7000
+
+auth.method = "token"
+auth.token = "CHANGE_ME_STRONG_TOKEN"   # 与 frpc 保持一致
+
+# 可选：Dashboard（注意加防火墙白名单）
+# webServer.addr = "0.0.0.0"
+# webServer.port = 7500
+# webServer.user = "admin"
+# webServer.password = "CHANGE_ME"

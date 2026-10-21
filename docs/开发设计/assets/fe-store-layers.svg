@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="700" viewBox="0 0 1280 700" font-family="Microsoft YaHei, PingFang SC, sans-serif"><defs><marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#909399"/></marker></defs><rect width="1280" height="700" fill="#FFFFFF"/><text x="640" y="36" font-size="20" fill="#303133" text-anchor="middle" font-weight="bold">前端状态与数据流分层（Pinia + Axios）</text>
+<rect x="40" y="80" width="220" height="110" rx="10" fill="#fff" stroke="#409EFF" stroke-width="2"/>
+<rect x="40" y="80" width="220" height="30" rx="10" fill="#409EFF"/>
+<rect x="40" y="98" width="220" height="12" rx="0" fill="#409EFF"/>
+<text x="150" y="101" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">View 组件</text>
+<text x="52" y="134" font-size="12" fill="#606266" text-anchor="start">views/**/*.vue</text>
+<text x="52" y="152" font-size="12" fill="#606266" text-anchor="start">只调 store / api</text>
+<text x="52" y="170" font-size="12" fill="#606266" text-anchor="start">不直接拼 URL</text>
+<rect x="280" y="80" width="220" height="110" rx="10" fill="#fff" stroke="#1B5E38" stroke-width="2"/>
+<rect x="280" y="80" width="220" height="30" rx="10" fill="#1B5E38"/>
+<rect x="280" y="98" width="220" height="12" rx="0" fill="#1B5E38"/>
+<text x="390" y="101" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">Pinia Store</text>
+<text x="292" y="134" font-size="12" fill="#606266" text-anchor="start">auth / app / calc</text>
+<text x="292" y="152" font-size="12" fill="#606266" text-anchor="start">跨页共享状态</text>
+<text x="292" y="170" font-size="12" fill="#606266" text-anchor="start">轮询生命周期</text>
+<rect x="520" y="80" width="220" height="110" rx="10" fill="#fff" stroke="#E6A23C" stroke-width="2"/>
+<rect x="520" y="80" width="220" height="30" rx="10" fill="#E6A23C"/>
+<rect x="520" y="98" width="220" height="12" rx="0" fill="#E6A23C"/>
+<text x="630" y="101" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">API 模块层</text>
+<text x="532" y="134" font-size="12" fill="#606266" text-anchor="start">api/calc.ts 等</text>
+<text x="532" y="152" font-size="12" fill="#606266" text-anchor="start">封装 endpoint</text>
+<text x="532" y="170" font-size="12" fill="#606266" text-anchor="start">type 定义</text>
+<rect x="760" y="80" width="220" height="110" rx="10" fill="#fff" stroke="#D9534F" stroke-width="2"/>
+<rect x="760" y="80" width="220" height="30" rx="10" fill="#D9534F"/>
+<rect x="760" y="98" width="220" height="12" rx="0" fill="#D9534F"/>
+<text x="870" y="101" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">request 拦截器</text>
+<text x="772" y="134" font-size="12" fill="#606266" text-anchor="start">CSRF Token 注入</text>
+<text x="772" y="152" font-size="12" fill="#606266" text-anchor="start">401 统一处理</text>
+<text x="772" y="170" font-size="12" fill="#606266" text-anchor="start">错误 ElMessage</text>
+<rect x="1000" y="80" width="220" height="110" rx="10" fill="#fff" stroke="#7B61FF" stroke-width="2"/>
+<rect x="1000" y="80" width="220" height="30" rx="10" fill="#7B61FF"/>
+<rect x="1000" y="98" width="220" height="12" rx="0" fill="#7B61FF"/>
+<text x="1110" y="101" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">FastAPI</text>
+<text x="1012" y="134" font-size="12" fill="#606266" text-anchor="start">/api/v1/*</text>
+<line x1="260" y1="135" x2="280" y2="135" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="500" y1="135" x2="520" y2="135" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="740" y1="135" x2="760" y2="135" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="980" y1="135" x2="1000" y2="135" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="240" width="580" height="400" rx="10" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="64" y="272" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">usePageTable（列表页统一模式）</text>
+<text x="64" y="306" font-size="12" fill="#1B5E38" text-anchor="start">const { query, rows, total, loading,</text>
+<text x="64" y="330" font-size="12" fill="#1B5E38" text-anchor="start">        search, reset, refresh } =</text>
+<text x="64" y="354" font-size="12" fill="#1B5E38" text-anchor="start">  usePageTable(fetchApi, defaultQuery)</text>
+<text x="64" y="378" font-size="12" fill="#606266" text-anchor="start"></text>
+<text x="64" y="402" font-size="12" fill="#606266" text-anchor="start">· query 含 page/page_size + 筛选字段</text>
+<text x="64" y="426" font-size="12" fill="#606266" text-anchor="start">· search(): page=1 后拉取</text>
+<text x="64" y="450" font-size="12" fill="#606266" text-anchor="start">· reset(): 清筛选 → search()</text>
+<text x="64" y="474" font-size="12" fill="#606266" text-anchor="start">· watch(query.page/page_size) 自动拉取</text>
+<text x="64" y="498" font-size="12" fill="#606266" text-anchor="start">· 返回的 fetch 包 try/finally 保证 loading</text>
+<rect x="660" y="240" width="580" height="400" rx="10" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="684" y="272" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">错误处理约定</text>
+<text x="684" y="306" font-size="12" fill="#606266" text-anchor="start">· 4xx：拦截器 ElMessage.error(detail)</text>
+<text x="684" y="330" font-size="12" fill="#606266" text-anchor="start">· 422：Pydantic 校验错误 → 表单字段标红</text>
+<text x="684" y="354" font-size="12" fill="#606266" text-anchor="start">  （响应 fields: {field: msg} 映射到 el-form）</text>
+<text x="684" y="378" font-size="12" fill="#606266" text-anchor="start">· 5xx：通用&quot;服务器异常&quot; + trace_id 便于排查</text>
+<text x="684" y="402" font-size="12" fill="#606266" text-anchor="start">· 业务码 code!=0：后端统一 {code, msg, data}</text>
+<text x="684" y="426" font-size="12" fill="#606266" text-anchor="start">  前端按 code 分支（如未匹配数&gt;0 预检警告）</text>
+<text x="684" y="450" font-size="12" fill="#606266" text-anchor="start">· 表单提交按钮 loading 防重复提交</text>
+<text x="684" y="474" font-size="12" fill="#606266" text-anchor="start">· 危险操作二次确认（ElMessageBox.confirm）</text>
+</svg>

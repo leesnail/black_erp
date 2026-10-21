@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Microsoft YaHei, PingFang SC, sans-serif"><rect width="1280" height="800" fill="#FFFFFF"/><rect x="0" y="0" width="1280" height="56" rx="0" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="1280" y2="56" stroke="#E4E7ED" stroke-width="1"/>
+<text x="16" y="36" font-size="18" fill="#1B5E38" text-anchor="start" font-weight="bold">BLACK ERP</text>
+<rect x="1058" y="12" width="96" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1072" y="33" font-size="12" fill="#606266" text-anchor="start">消息 3</text>
+<circle cx="1186" cy="28" r="13" fill="#1B5E38"/>
+<text x="1186" y="33" font-size="11" fill="#fff" text-anchor="middle">王</text>
+<text x="1206" y="33" font-size="12" fill="#606266" text-anchor="start">王老板 ▾</text>
+<rect x="0" y="56" width="200" height="744" rx="0" fill="#1F2D3D"/>
+<text x="16" y="84" font-size="11" fill="#8A98A8" text-anchor="start">工作台</text>
+<rect x="6" y="92" width="188" height="25" rx="4" fill="#2A6B45"/>
+<text x="20" y="109" font-size="12" fill="#FFFFFF" text-anchor="start" font-weight="bold">工作台</text>
+<text x="16" y="138" font-size="11" fill="#8A98A8" text-anchor="start">客服工作台</text>
+<text x="20" y="163" font-size="12" fill="#C0C4CC" text-anchor="start">售后登记</text>
+<text x="20" y="190" font-size="12" fill="#C0C4CC" text-anchor="start">供应商对接</text>
+<text x="20" y="217" font-size="12" fill="#C0C4CC" text-anchor="start">发票管理</text>
+<text x="16" y="246" font-size="11" fill="#8A98A8" text-anchor="start">成本报价</text>
+<text x="20" y="271" font-size="12" fill="#C0C4CC" text-anchor="start">供应商管理</text>
+<text x="20" y="298" font-size="12" fill="#C0C4CC" text-anchor="start">规格成本表</text>
+<text x="20" y="325" font-size="12" fill="#C0C4CC" text-anchor="start">报价录入</text>
+<text x="20" y="352" font-size="12" fill="#C0C4CC" text-anchor="start">模板导入</text>
+<text x="16" y="381" font-size="11" fill="#8A98A8" text-anchor="start">运营管理</text>
+<text x="20" y="406" font-size="12" fill="#C0C4CC" text-anchor="start">店铺产品登记</text>
+<text x="20" y="433" font-size="12" fill="#C0C4CC" text-anchor="start">成本表(只读)</text>
+<text x="20" y="460" font-size="12" fill="#C0C4CC" text-anchor="start">ROI 计算</text>
+<text x="16" y="489" font-size="11" fill="#8A98A8" text-anchor="start">财务核算</text>
+<text x="20" y="514" font-size="12" fill="#C0C4CC" text-anchor="start">订单上传与计算</text>
+<text x="20" y="541" font-size="12" fill="#C0C4CC" text-anchor="start">计算批次</text>
+<text x="20" y="568" font-size="12" fill="#C0C4CC" text-anchor="start">未匹配处理</text>
+<text x="20" y="595" font-size="12" fill="#C0C4CC" text-anchor="start">经营日报</text>
+<text x="16" y="624" font-size="11" fill="#8A98A8" text-anchor="start">经营驾驶舱</text>
+<text x="20" y="649" font-size="12" fill="#C0C4CC" text-anchor="start">利润总览</text>
+<text x="20" y="676" font-size="12" fill="#C0C4CC" text-anchor="start">日报中心</text>
+<text x="16" y="705" font-size="11" fill="#8A98A8" text-anchor="start">系统管理</text>
+<text x="20" y="730" font-size="12" fill="#C0C4CC" text-anchor="start">账号管理</text>
+<text x="20" y="757" font-size="12" fill="#C0C4CC" text-anchor="start">角色与权限</text>
+<text x="20" y="784" font-size="12" fill="#C0C4CC" text-anchor="start">附加成本规则</text>
+<text x="20" y="811" font-size="12" fill="#C0C4CC" text-anchor="start">操作日志</text>
+<line x1="0" y1="0" x2="1280" y2="0" stroke="#E6A23C" stroke-width="2"/>
+<rect x="0" y="0" width="1280" height="56" rx="0" fill="none" stroke="#E6A23C" stroke-width="2"/>
+<text x="560" y="34" font-size="12" fill="#E6A23C" text-anchor="start">顶栏：Logo · 消息 · 账号</text>
+<rect x="0" y="56" width="200" height="744" rx="0" fill="none" stroke="#E6A23C" stroke-width="2"/>
+<text x="100" y="786" font-size="12" fill="#E6A23C" text-anchor="middle">左侧菜单（按权限渲染）</text>
+<rect x="224" y="80" width="1032" height="696" rx="8" fill="none" stroke="#1B5E38" stroke-width="2"/>
+<line x1="224" y1="80" x2="1256" y2="776" stroke="#EAF7EE" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="740" y="420" font-size="15" fill="#1B5E38" text-anchor="middle">内容区：页面标题 · 筛选条 · 表格 / 表单</text>
+<text x="740" y="446" font-size="12" fill="#909399" text-anchor="middle">基准 1280×800 · 菜单 200px · 内容内边距 24px · 栅格 8px</text>
+</svg>

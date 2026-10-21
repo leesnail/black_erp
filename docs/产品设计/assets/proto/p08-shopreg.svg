@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Microsoft YaHei, PingFang SC, sans-serif"><rect width="1280" height="800" fill="#FFFFFF"/><rect x="0" y="0" width="1280" height="56" rx="0" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="1280" y2="56" stroke="#E4E7ED" stroke-width="1"/>
+<text x="16" y="36" font-size="18" fill="#1B5E38" text-anchor="start" font-weight="bold">BLACK ERP</text>
+<rect x="1058" y="12" width="96" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1072" y="33" font-size="12" fill="#606266" text-anchor="start">消息 3</text>
+<circle cx="1186" cy="28" r="13" fill="#1B5E38"/>
+<text x="1186" y="33" font-size="11" fill="#fff" text-anchor="middle">王</text>
+<text x="1206" y="33" font-size="12" fill="#606266" text-anchor="start">王老板 ▾</text>
+<rect x="0" y="56" width="200" height="744" rx="0" fill="#1F2D3D"/>
+<text x="16" y="84" font-size="11" fill="#8A98A8" text-anchor="start">工作台</text>
+<text x="20" y="109" font-size="12" fill="#C0C4CC" text-anchor="start">工作台</text>
+<text x="16" y="138" font-size="11" fill="#8A98A8" text-anchor="start">客服工作台</text>
+<text x="20" y="163" font-size="12" fill="#C0C4CC" text-anchor="start">售后登记</text>
+<text x="20" y="190" font-size="12" fill="#C0C4CC" text-anchor="start">供应商对接</text>
+<text x="20" y="217" font-size="12" fill="#C0C4CC" text-anchor="start">发票管理</text>
+<text x="16" y="246" font-size="11" fill="#8A98A8" text-anchor="start">成本报价</text>
+<text x="20" y="271" font-size="12" fill="#C0C4CC" text-anchor="start">供应商管理</text>
+<text x="20" y="298" font-size="12" fill="#C0C4CC" text-anchor="start">规格成本表</text>
+<text x="20" y="325" font-size="12" fill="#C0C4CC" text-anchor="start">报价录入</text>
+<text x="20" y="352" font-size="12" fill="#C0C4CC" text-anchor="start">模板导入</text>
+<text x="16" y="381" font-size="11" fill="#8A98A8" text-anchor="start">运营管理</text>
+<rect x="6" y="389" width="188" height="25" rx="4" fill="#2A6B45"/>
+<text x="20" y="406" font-size="12" fill="#FFFFFF" text-anchor="start" font-weight="bold">店铺产品登记</text>
+<text x="20" y="433" font-size="12" fill="#C0C4CC" text-anchor="start">成本表(只读)</text>
+<text x="20" y="460" font-size="12" fill="#C0C4CC" text-anchor="start">ROI 计算</text>
+<text x="16" y="489" font-size="11" fill="#8A98A8" text-anchor="start">财务核算</text>
+<text x="20" y="514" font-size="12" fill="#C0C4CC" text-anchor="start">订单上传与计算</text>
+<text x="20" y="541" font-size="12" fill="#C0C4CC" text-anchor="start">计算批次</text>
+<text x="20" y="568" font-size="12" fill="#C0C4CC" text-anchor="start">未匹配处理</text>
+<text x="20" y="595" font-size="12" fill="#C0C4CC" text-anchor="start">经营日报</text>
+<text x="16" y="624" font-size="11" fill="#8A98A8" text-anchor="start">经营驾驶舱</text>
+<text x="20" y="649" font-size="12" fill="#C0C4CC" text-anchor="start">利润总览</text>
+<text x="20" y="676" font-size="12" fill="#C0C4CC" text-anchor="start">日报中心</text>
+<text x="16" y="705" font-size="11" fill="#8A98A8" text-anchor="start">系统管理</text>
+<text x="20" y="730" font-size="12" fill="#C0C4CC" text-anchor="start">账号管理</text>
+<text x="20" y="757" font-size="12" fill="#C0C4CC" text-anchor="start">角色与权限</text>
+<text x="20" y="784" font-size="12" fill="#C0C4CC" text-anchor="start">附加成本规则</text>
+<text x="20" y="811" font-size="12" fill="#C0C4CC" text-anchor="start">操作日志</text>
+<text x="224" y="96" font-size="18" fill="#303133" text-anchor="start" font-weight="bold">店铺产品登记</text>
+<rect x="1136" y="78" width="120" height="32" rx="4" fill="#1B5E38"/>
+<text x="1196" y="98" font-size="12" fill="#fff" text-anchor="middle">+ 新增登记</text>
+<rect x="224" y="128" width="140" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="148" font-size="12" fill="#303133" text-anchor="start">店铺: 誉恒 ▾</text>
+<rect x="376" y="128" width="260" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="386" y="148" font-size="12" fill="#909399" text-anchor="start">标题关键字</text>
+<rect x="648" y="128" width="72" height="32" rx="4" fill="#1B5E38"/>
+<text x="684" y="148" font-size="12" fill="#fff" text-anchor="middle">查询</text>
+<rect x="224" y="184" width="1032" height="104" rx="0" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<rect x="224" y="184" width="1032" height="36" rx="0" fill="#F5F7FA"/>
+<line x1="224" y1="220" x2="1256" y2="220" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="207" font-size="12" fill="#606266" text-anchor="start">标题关键字</text>
+<line x1="464" y1="184" x2="464" y2="288" stroke="#E4E7ED" stroke-width="1"/>
+<text x="474" y="207" font-size="12" fill="#606266" text-anchor="start">链接 ID</text>
+<line x1="694" y1="184" x2="694" y2="288" stroke="#E4E7ED" stroke-width="1"/>
+<text x="704" y="207" font-size="12" fill="#606266" text-anchor="start">规格编码</text>
+<line x1="824" y1="184" x2="824" y2="288" stroke="#E4E7ED" stroke-width="1"/>
+<text x="834" y="207" font-size="12" fill="#606266" text-anchor="start">规格</text>
+<line x1="964" y1="184" x2="964" y2="288" stroke="#E4E7ED" stroke-width="1"/>
+<text x="974" y="207" font-size="12" fill="#606266" text-anchor="start">售价</text>
+<line x1="1064" y1="184" x2="1064" y2="288" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1074" y="207" font-size="12" fill="#606266" text-anchor="start">状态</text>
+<line x1="1144" y1="184" x2="1144" y2="288" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1154" y="207" font-size="12" fill="#606266" text-anchor="start">操作</text>
+<text x="234" y="242" font-size="12" fill="#303133" text-anchor="start">葱香椒盐月饼盒装</text>
+<text x="474" y="242" font-size="12" fill="#303133" text-anchor="start">3835688988560195915</text>
+<text x="704" y="242" font-size="12" fill="#303133" text-anchor="start">SP000123</text>
+<text x="834" y="242" font-size="12" fill="#303133" text-anchor="start">60g×10枚</text>
+<text x="974" y="242" font-size="12" fill="#303133" text-anchor="start">69.90</text>
+<text x="1074" y="242" font-size="12" fill="#67C23A" text-anchor="start">启用</text>
+<text x="1154" y="242" font-size="12" fill="#303133" text-anchor="start">编辑</text>
+<line x1="224" y1="254" x2="1256" y2="254" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="276" font-size="12" fill="#303133" text-anchor="start">蛋黄莲蓉月饼盒装</text>
+<text x="474" y="276" font-size="12" fill="#303133" text-anchor="start">3835688999112003112</text>
+<text x="704" y="276" font-size="12" fill="#303133" text-anchor="start">SP000125</text>
+<text x="834" y="276" font-size="12" fill="#303133" text-anchor="start">60g×8枚</text>
+<text x="974" y="276" font-size="12" fill="#303133" text-anchor="start">79.90</text>
+<text x="1074" y="276" font-size="12" fill="#67C23A" text-anchor="start">启用</text>
+<text x="1154" y="276" font-size="12" fill="#303133" text-anchor="start">编辑</text>
+<rect x="200" y="56" width="1080" height="744" rx="0" fill="#000000" opacity="0.28"/>
+<rect x="400" y="193" width="680" height="470" rx="8" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="420" y="227" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">新增店铺产品登记</text>
+<line x1="400" y1="245" x2="1080" y2="245" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1046" y="227" font-size="14" fill="#909399" text-anchor="start">✕</text>
+<circle cx="452" cy="279" r="12" fill="#1B5E38"/>
+<text x="452" y="283" font-size="11" fill="#fff" text-anchor="middle">1</text>
+<text x="472" y="283" font-size="13" fill="#1B5E38" text-anchor="start">基本信息</text>
+<line x1="466" y1="279" x2="628" y2="279" stroke="#1B5E38" stroke-width="2"/>
+<circle cx="642" cy="279" r="12" fill="#1B5E38"/>
+<text x="642" y="283" font-size="11" fill="#fff" text-anchor="middle">2</text>
+<text x="662" y="283" font-size="13" fill="#1B5E38" text-anchor="start" font-weight="bold">选择规格</text>
+<line x1="656" y1="279" x2="818" y2="279" stroke="#E4E7ED" stroke-width="2"/>
+<circle cx="832" cy="279" r="12" fill="#fff" stroke="#E4E7ED"/>
+<text x="832" y="283" font-size="11" fill="#909399" text-anchor="middle">3</text>
+<text x="852" y="283" font-size="13" fill="#909399" text-anchor="start">售价确认</text>
+<text x="440" y="325" font-size="12" fill="#606266" text-anchor="start">① 标题关键字 *</text>
+<rect x="440" y="335" width="300" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="450" y="355" font-size="12" fill="#303133" text-anchor="start">香葱椒盐月饼</text>
+<text x="772" y="325" font-size="12" fill="#606266" text-anchor="start">链接 ID *</text>
+<rect x="772" y="335" width="268" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="782" y="355" font-size="12" fill="#303133" text-anchor="start">3835688988560195915</text>
+<text x="440" y="397" font-size="12" fill="#606266" text-anchor="start">② 选择规格（从成本表选择，不可手填）*</text>
+<rect x="440" y="407" width="600" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="450" y="427" font-size="12" fill="#909399" text-anchor="start">🔍 搜索：椒盐</text>
+<rect x="440" y="447" width="600" height="108" rx="6" fill="#fff" stroke="#1B5E38" stroke-width="2"/>
+<circle cx="462" cy="475" r="7" fill="#1B5E38"/>
+<circle cx="462" cy="475" r="4" fill="#fff"/>
+<text x="480" y="479" font-size="13" fill="#303133" text-anchor="start" font-weight="bold">SP000123</text>
+<text x="600" y="479" font-size="13" fill="#303133" text-anchor="start">60g×10枚</text>
+<text x="730" y="479" font-size="13" fill="#2A6B45" text-anchor="start">拿货价 32.00</text>
+<text x="870" y="479" font-size="13" fill="#606266" text-anchor="start">誉恒源</text>
+<text x="480" y="523" font-size="13" fill="#303133" text-anchor="start">SP000124</text>
+<text x="600" y="523" font-size="13" fill="#303133" text-anchor="start">60g×15枚</text>
+<text x="730" y="523" font-size="13" fill="#606266" text-anchor="start">拿货价 45.00</text>
+<text x="870" y="523" font-size="13" fill="#606266" text-anchor="start">誉恒源</text>
+<text x="440" y="589" font-size="12" fill="#606266" text-anchor="start">③ 规格售价 *</text>
+<rect x="440" y="599" width="160" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="450" y="619" font-size="12" fill="#303133" text-anchor="start">69.90</text>
+<text x="616" y="623" font-size="12" fill="#606266" text-anchor="start">元</text>
+<text x="650" y="623" font-size="11" fill="#E6A23C" text-anchor="start">提示：该规格已有登记售价 69.90，新售价将并存，靠订单金额区分</text>
+<rect x="846" y="599" width="90" height="34" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="891" y="620" font-size="12" fill="#606266" text-anchor="middle">上一步</text>
+<rect x="948" y="599" width="92" height="34" rx="4" fill="#1B5E38"/>
+<text x="994" y="620" font-size="12" fill="#fff" text-anchor="middle">保存</text>
+</svg>

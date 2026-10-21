@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" font-family="Microsoft YaHei, PingFang SC, sans-serif"><defs><marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#909399"/></marker></defs><rect width="1280" height="640" fill="#FFFFFF"/><text x="640" y="36" font-size="20" fill="#303133" text-anchor="middle" font-weight="bold">权限驱动的页面渲染（三层裁剪）</text>
+<rect x="40" y="80" width="360" height="120" rx="10" fill="#fff" stroke="#409EFF" stroke-width="2"/>
+<rect x="40" y="80" width="360" height="32" rx="10" fill="#409EFF"/>
+<rect x="40" y="100" width="360" height="12" rx="0" fill="#409EFF"/>
+<text x="220" y="102" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">第一层：路由注册</text>
+<text x="56" y="140" font-size="12" fill="#606266" text-anchor="start">routes 只注册 perms 内模块</text>
+<text x="56" y="160" font-size="12" fill="#606266" text-anchor="start">或全注册但 meta.perm 守卫拦截</text>
+<rect x="440" y="80" width="360" height="120" rx="10" fill="#fff" stroke="#1B5E38" stroke-width="2"/>
+<rect x="440" y="80" width="360" height="32" rx="10" fill="#1B5E38"/>
+<rect x="440" y="100" width="360" height="12" rx="0" fill="#1B5E38"/>
+<text x="620" y="102" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">第二层：菜单可见性</text>
+<text x="456" y="140" font-size="12" fill="#606266" text-anchor="start">MENU_TREE filter(perms)</text>
+<text x="456" y="160" font-size="12" fill="#606266" text-anchor="start">无权限菜单不渲染 DOM</text>
+<rect x="840" y="80" width="360" height="120" rx="10" fill="#fff" stroke="#E6A23C" stroke-width="2"/>
+<rect x="840" y="80" width="360" height="32" rx="10" fill="#E6A23C"/>
+<rect x="840" y="100" width="360" height="12" rx="0" fill="#E6A23C"/>
+<text x="1020" y="102" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">第三层：按钮/列裁剪</text>
+<text x="856" y="140" font-size="12" fill="#606266" text-anchor="start">v-perm 指令移除按钮</text>
+<text x="856" y="160" font-size="12" fill="#606266" text-anchor="start">cost 列 v-if=&quot;hasPerm(...)&quot;</text>
+<rect x="40" y="240" width="1200" height="360" rx="10" fill="#F5F7FA" stroke="#E4E7ED" stroke-width="1"/>
+<text x="64" y="272" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">典型页面：成本表（按角色差异化）</text>
+<text x="64" y="304" font-size="12" fill="#909399" text-anchor="start">同一个 SpecTable.vue，props 控制 readonly；API 层对客服角色不返回 price 字段（安全边界在后端）</text>
+<rect x="64" y="340" width="120" height="36" rx="6" fill="#fff" stroke="#67C23A" stroke-width="1"/>
+<text x="124" y="363" font-size="13" fill="#67C23A" text-anchor="middle" font-weight="bold">采购</text>
+<text x="210" y="363" font-size="13" fill="#303133" text-anchor="start">master.spec.write</text>
+<text x="560" y="363" font-size="13" fill="#606266" text-anchor="start">→  新增/编辑/导入/OCR 按钮全显</text>
+<rect x="64" y="390" width="120" height="36" rx="6" fill="#fff" stroke="#409EFF" stroke-width="1"/>
+<text x="124" y="413" font-size="13" fill="#409EFF" text-anchor="middle" font-weight="bold">运营/财务</text>
+<text x="210" y="413" font-size="13" fill="#303133" text-anchor="start">master.spec.list</text>
+<text x="560" y="413" font-size="13" fill="#606266" text-anchor="start">→  只读：隐藏写按钮，列含拿货价</text>
+<rect x="64" y="440" width="120" height="36" rx="6" fill="#fff" stroke="#D9534F" stroke-width="1"/>
+<text x="124" y="463" font-size="13" fill="#D9534F" text-anchor="middle" font-weight="bold">客服</text>
+<text x="210" y="463" font-size="13" fill="#303133" text-anchor="start">无 master.spec 权限</text>
+<text x="560" y="463" font-size="13" fill="#606266" text-anchor="start">→  菜单不可见；即便直连 URL → 403 页</text>
+<rect x="64" y="490" width="120" height="36" rx="6" fill="#fff" stroke="#E6A23C" stroke-width="1"/>
+<text x="124" y="513" font-size="13" fill="#E6A23C" text-anchor="middle" font-weight="bold">老板</text>
+<text x="210" y="513" font-size="13" fill="#303133" text-anchor="start">master.spec.list + export</text>
+<text x="560" y="513" font-size="13" fill="#606266" text-anchor="start">→  只读 + 导出按钮</text>
+</svg>

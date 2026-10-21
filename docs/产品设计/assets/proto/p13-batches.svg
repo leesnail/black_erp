@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Microsoft YaHei, PingFang SC, sans-serif"><rect width="1280" height="800" fill="#FFFFFF"/><rect x="0" y="0" width="1280" height="56" rx="0" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="1280" y2="56" stroke="#E4E7ED" stroke-width="1"/>
+<text x="16" y="36" font-size="18" fill="#1B5E38" text-anchor="start" font-weight="bold">BLACK ERP</text>
+<rect x="1058" y="12" width="96" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1072" y="33" font-size="12" fill="#606266" text-anchor="start">消息 3</text>
+<circle cx="1186" cy="28" r="13" fill="#1B5E38"/>
+<text x="1186" y="33" font-size="11" fill="#fff" text-anchor="middle">王</text>
+<text x="1206" y="33" font-size="12" fill="#606266" text-anchor="start">王老板 ▾</text>
+<rect x="0" y="56" width="200" height="744" rx="0" fill="#1F2D3D"/>
+<text x="16" y="84" font-size="11" fill="#8A98A8" text-anchor="start">工作台</text>
+<text x="20" y="109" font-size="12" fill="#C0C4CC" text-anchor="start">工作台</text>
+<text x="16" y="138" font-size="11" fill="#8A98A8" text-anchor="start">客服工作台</text>
+<text x="20" y="163" font-size="12" fill="#C0C4CC" text-anchor="start">售后登记</text>
+<text x="20" y="190" font-size="12" fill="#C0C4CC" text-anchor="start">供应商对接</text>
+<text x="20" y="217" font-size="12" fill="#C0C4CC" text-anchor="start">发票管理</text>
+<text x="16" y="246" font-size="11" fill="#8A98A8" text-anchor="start">成本报价</text>
+<text x="20" y="271" font-size="12" fill="#C0C4CC" text-anchor="start">供应商管理</text>
+<text x="20" y="298" font-size="12" fill="#C0C4CC" text-anchor="start">规格成本表</text>
+<text x="20" y="325" font-size="12" fill="#C0C4CC" text-anchor="start">报价录入</text>
+<text x="20" y="352" font-size="12" fill="#C0C4CC" text-anchor="start">模板导入</text>
+<text x="16" y="381" font-size="11" fill="#8A98A8" text-anchor="start">运营管理</text>
+<text x="20" y="406" font-size="12" fill="#C0C4CC" text-anchor="start">店铺产品登记</text>
+<text x="20" y="433" font-size="12" fill="#C0C4CC" text-anchor="start">成本表(只读)</text>
+<text x="20" y="460" font-size="12" fill="#C0C4CC" text-anchor="start">ROI 计算</text>
+<text x="16" y="489" font-size="11" fill="#8A98A8" text-anchor="start">财务核算</text>
+<text x="20" y="514" font-size="12" fill="#C0C4CC" text-anchor="start">订单上传与计算</text>
+<rect x="6" y="524" width="188" height="25" rx="4" fill="#2A6B45"/>
+<text x="20" y="541" font-size="12" fill="#FFFFFF" text-anchor="start" font-weight="bold">计算批次</text>
+<text x="20" y="568" font-size="12" fill="#C0C4CC" text-anchor="start">未匹配处理</text>
+<text x="20" y="595" font-size="12" fill="#C0C4CC" text-anchor="start">经营日报</text>
+<text x="16" y="624" font-size="11" fill="#8A98A8" text-anchor="start">经营驾驶舱</text>
+<text x="20" y="649" font-size="12" fill="#C0C4CC" text-anchor="start">利润总览</text>
+<text x="20" y="676" font-size="12" fill="#C0C4CC" text-anchor="start">日报中心</text>
+<text x="16" y="705" font-size="11" fill="#8A98A8" text-anchor="start">系统管理</text>
+<text x="20" y="730" font-size="12" fill="#C0C4CC" text-anchor="start">账号管理</text>
+<text x="20" y="757" font-size="12" fill="#C0C4CC" text-anchor="start">角色与权限</text>
+<text x="20" y="784" font-size="12" fill="#C0C4CC" text-anchor="start">附加成本规则</text>
+<text x="20" y="811" font-size="12" fill="#C0C4CC" text-anchor="start">操作日志</text>
+<text x="224" y="96" font-size="18" fill="#303133" text-anchor="start" font-weight="bold">计算批次</text>
+<rect x="224" y="128" width="140" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="148" font-size="12" fill="#303133" text-anchor="start">店铺 ▾</text>
+<rect x="376" y="128" width="150" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="386" y="148" font-size="12" fill="#303133" text-anchor="start">期间 ▾</text>
+<rect x="538" y="128" width="130" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="548" y="148" font-size="12" fill="#303133" text-anchor="start">状态 ▾</text>
+<rect x="680" y="128" width="72" height="32" rx="4" fill="#1B5E38"/>
+<text x="716" y="148" font-size="12" fill="#fff" text-anchor="middle">查询</text>
+<rect x="224" y="184" width="1032" height="138" rx="0" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<rect x="224" y="184" width="1032" height="36" rx="0" fill="#F5F7FA"/>
+<line x1="224" y1="220" x2="1256" y2="220" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="207" font-size="12" fill="#606266" text-anchor="start">批次</text>
+<line x1="314" y1="184" x2="314" y2="322" stroke="#E4E7ED" stroke-width="1"/>
+<text x="324" y="207" font-size="12" fill="#606266" text-anchor="start">店铺</text>
+<line x1="394" y1="184" x2="394" y2="322" stroke="#E4E7ED" stroke-width="1"/>
+<text x="404" y="207" font-size="12" fill="#606266" text-anchor="start">期间</text>
+<line x1="494" y1="184" x2="494" y2="322" stroke="#E4E7ED" stroke-width="1"/>
+<text x="504" y="207" font-size="12" fill="#606266" text-anchor="start">文件名</text>
+<line x1="684" y1="184" x2="684" y2="322" stroke="#E4E7ED" stroke-width="1"/>
+<text x="694" y="207" font-size="12" fill="#606266" text-anchor="start">行数</text>
+<line x1="754" y1="184" x2="754" y2="322" stroke="#E4E7ED" stroke-width="1"/>
+<text x="764" y="207" font-size="12" fill="#606266" text-anchor="start">采购成本</text>
+<line x1="884" y1="184" x2="884" y2="322" stroke="#E4E7ED" stroke-width="1"/>
+<text x="894" y="207" font-size="12" fill="#606266" text-anchor="start">利润</text>
+<line x1="1014" y1="184" x2="1014" y2="322" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1024" y="207" font-size="12" fill="#606266" text-anchor="start">版本</text>
+<line x1="1084" y1="184" x2="1084" y2="322" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1094" y="207" font-size="12" fill="#606266" text-anchor="start">状态</text>
+<line x1="1164" y1="184" x2="1164" y2="322" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1174" y="207" font-size="12" fill="#606266" text-anchor="start">操作</text>
+<text x="234" y="242" font-size="12" fill="#303133" text-anchor="start">B0087</text>
+<text x="324" y="242" font-size="12" fill="#303133" text-anchor="start">誉恒</text>
+<text x="404" y="242" font-size="12" fill="#303133" text-anchor="start">2026-08</text>
+<text x="504" y="242" font-size="12" fill="#303133" text-anchor="start">誉恒8月份.csv</text>
+<text x="694" y="242" font-size="12" fill="#303133" text-anchor="start">1521</text>
+<text x="764" y="242" font-size="12" fill="#303133" text-anchor="start">¥45,678.00</text>
+<text x="894" y="242" font-size="12" fill="#303133" text-anchor="start">¥53,097.00</text>
+<text x="1024" y="242" font-size="12" fill="#303133" text-anchor="start">v1</text>
+<text x="1094" y="242" font-size="12" fill="#67C23A" text-anchor="start">成功</text>
+<text x="1174" y="242" font-size="12" fill="#303133" text-anchor="start">查看 重算</text>
+<line x1="224" y1="254" x2="1256" y2="254" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="276" font-size="12" fill="#303133" text-anchor="start">B0086</text>
+<text x="324" y="276" font-size="12" fill="#303133" text-anchor="start">誉恒</text>
+<text x="404" y="276" font-size="12" fill="#303133" text-anchor="start">2026-07</text>
+<text x="504" y="276" font-size="12" fill="#303133" text-anchor="start">誉恒7月份.csv</text>
+<text x="694" y="276" font-size="12" fill="#303133" text-anchor="start">1402</text>
+<text x="764" y="276" font-size="12" fill="#303133" text-anchor="start">¥41,200.00</text>
+<text x="894" y="276" font-size="12" fill="#303133" text-anchor="start">¥48,900.00</text>
+<text x="1024" y="276" font-size="12" fill="#303133" text-anchor="start">v1</text>
+<text x="1094" y="276" font-size="12" fill="#67C23A" text-anchor="start">成功</text>
+<text x="1174" y="276" font-size="12" fill="#303133" text-anchor="start">查看 重算</text>
+<line x1="224" y1="288" x2="1256" y2="288" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="310" font-size="12" fill="#303133" text-anchor="start">B0085</text>
+<text x="324" y="310" font-size="12" fill="#303133" text-anchor="start">甜品</text>
+<text x="404" y="310" font-size="12" fill="#303133" text-anchor="start">2026-07</text>
+<text x="504" y="310" font-size="12" fill="#303133" text-anchor="start">甜品7月订单.csv</text>
+<text x="694" y="310" font-size="12" fill="#303133" text-anchor="start">688</text>
+<text x="764" y="310" font-size="12" fill="#303133" text-anchor="start">¥18,400.00</text>
+<text x="894" y="310" font-size="12" fill="#303133" text-anchor="start">¥21,050.00</text>
+<text x="1024" y="310" font-size="12" fill="#303133" text-anchor="start">v1</text>
+<text x="1094" y="310" font-size="12" fill="#67C23A" text-anchor="start">成功</text>
+<text x="1174" y="310" font-size="12" fill="#303133" text-anchor="start">查看 重算</text>
+<rect x="200" y="56" width="1080" height="744" rx="0" fill="#000000" opacity="0.28"/>
+<rect x="500" y="308" width="480" height="240" rx="8" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="520" y="342" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">重新计算确认</text>
+<line x1="500" y1="360" x2="980" y2="360" stroke="#E4E7ED" stroke-width="1"/>
+<text x="946" y="342" font-size="14" fill="#909399" text-anchor="start">✕</text>
+<text x="520" y="404" font-size="13" fill="#303133" text-anchor="start">将基于当前成本表与匹配规则重新计算批次 B0087，</text>
+<text x="520" y="432" font-size="13" fill="#303133" text-anchor="start">生成新版本 v2；v1 结果永久保留可查。</text>
+<text x="520" y="466" font-size="12" fill="#E6A23C" text-anchor="start">当前 12 单未匹配是否已在「未匹配处理」中完成？</text>
+<rect x="754" y="490" width="90" height="34" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="799" y="511" font-size="12" fill="#606266" text-anchor="middle">取消</text>
+<rect x="856" y="490" width="104" height="34" rx="4" fill="#1B5E38"/>
+<text x="908" y="511" font-size="12" fill="#fff" text-anchor="middle">确认重算</text>
+</svg>

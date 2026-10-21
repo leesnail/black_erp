@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="780" viewBox="0 0 1180 780" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <defs>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5A6A7A"/>
+    </marker>
+    <marker id="arr2b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2E7D8F"/>
+    </marker>
+    <filter id="sh2" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <rect width="1180" height="780" fill="#FAFBFC"/>
+  <text x="590" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1F2D3D">BLACK ERP · 部署架构图（内网本地 + 内网穿透）</text>
+  <text x="590" y="64" text-anchor="middle" font-size="13" fill="#7A8794">Windows 本地 Docker Desktop · 同内网直连 IP · 远程经 frp/托管穿透 HTTPS · 远期可平移云主机</text>
+
+  <!-- 用户 -->
+  <rect x="430" y="90" width="210" height="60" rx="10" fill="#E8F1FD" stroke="#7FA3D4" stroke-width="1.5" filter="url(#sh2)"/>
+  <text x="535" y="116" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#24405F">内网成员 · PC 浏览器</text>
+  <text x="535" y="136" text-anchor="middle" font-size="12" fill="#5A6A7A">直接访问 http://部署机IP</text>
+
+  <rect x="680" y="90" width="230" height="60" rx="10" fill="#FDF0E3" stroke="#D9A05C" stroke-width="1.5" filter="url(#sh2)"/>
+  <text x="795" y="116" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#8A5316">远程成员 · 内网穿透</text>
+  <text x="795" y="136" text-anchor="middle" font-size="11.5" fill="#8A5316">frpc → frps/托管网关 → HTTPS</text>
+
+  <line x1="535" y1="150" x2="535" y2="188" stroke="#5A6A7A" stroke-width="2" marker-end="url(#arr2)"/>
+  <line x1="740" y1="150" x2="640" y2="188" stroke="#B07A2A" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- 应用服务器大框 -->
+  <rect x="90" y="196" width="760" height="470" rx="14" fill="#F4F7FA" stroke="#B0BECC" stroke-width="1.5" stroke-dasharray="8 4" filter="url(#sh2)"/>
+  <text x="110" y="224" font-size="15" font-weight="bold" fill="#3D4E5F">Windows 本地部署机（8C16G 建议 · Win10/11/Server）</text>
+
+  <!-- nginx -->
+  <rect x="130" y="244" width="300" height="84" rx="8" fill="#FDF0E3" stroke="#D9A05C" stroke-width="1.5"/>
+  <text x="280" y="272" text-anchor="middle" font-size="14" font-weight="bold" fill="#8A5316">nginx 容器 :80/:443</text>
+  <text x="280" y="294" text-anchor="middle" font-size="12" fill="#8A5316">dist 静态 · 反代 /api · 50m 限制</text>
+  <text x="280" y="312" text-anchor="middle" font-size="11" fill="#A07040">nginx:alpine</text>
+
+  <line x1="280" y1="328" x2="280" y2="366" stroke="#5A6A7A" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="295" y="352" font-size="11.5" fill="#5A6A7A">/api 反代</text>
+
+  <!-- app -->
+  <rect x="130" y="372" width="300" height="84" rx="8" fill="#EAF7EE" stroke="#5FA378" stroke-width="1.5"/>
+  <text x="280" y="400" text-anchor="middle" font-size="14" font-weight="bold" fill="#2A6B45">app 容器 :8000</text>
+  <text x="280" y="422" text-anchor="middle" font-size="12" fill="#2A6B45">FastAPI + Uvicorn ×2</text>
+  <text x="280" y="440" text-anchor="middle" font-size="11" fill="#5A7A68">python:3.12-slim · alembic 迁移前置</text>
+
+  <!-- worker + beat -->
+  <rect x="490" y="372" width="320" height="84" rx="8" fill="#F3EDFB" stroke="#8E6FC0" stroke-width="1.5"/>
+  <text x="650" y="400" text-anchor="middle" font-size="14" font-weight="bold" fill="#4A3570">worker + beat 容器</text>
+  <text x="650" y="422" text-anchor="middle" font-size="12" fill="#4A3570">Celery Worker（calc/report/reminder）</text>
+  <text x="650" y="440" text-anchor="middle" font-size="11" fill="#6A5590">Celery Beat 定时 · 同 app 镜像</text>
+
+  <line x1="280" y1="456" x2="280" y2="500" stroke="#5A6A7A" stroke-width="2" marker-end="url(#arr2)"/>
+  <line x1="650" y1="456" x2="650" y2="500" stroke="#5A6A7A" stroke-width="2" marker-end="url(#arr2)"/>
+  <line x1="430" y1="414" x2="490" y2="414" stroke="#5A6A7A" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="460" y="404" text-anchor="middle" font-size="11" fill="#5A6A7A">入队</text>
+
+  <!-- redis -->
+  <rect x="130" y="506" width="300" height="76" rx="8" fill="#FFF8E1" stroke="#C9A227" stroke-width="1.5"/>
+  <text x="280" y="534" text-anchor="middle" font-size="14" font-weight="bold" fill="#7A6210">Redis 容器 :6379</text>
+  <text x="280" y="556" text-anchor="middle" font-size="12" fill="#7A6210">Celery 队列 · Session · 分布式锁</text>
+  <text x="280" y="573" text-anchor="middle" font-size="11" fill="#9A8030">redis:7-alpine</text>
+
+  <!-- 虚线连接 redis -->
+  <line x1="430" y1="544" x2="490" y2="544" stroke="#5A6A7A" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arr2)"/>
+  <line x1="650" y1="506" x2="650" y2="544" stroke="#5A6A7A" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <line x1="650" y1="544" x2="600" y2="544" stroke="#5A6A7A" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arr2)"/>
+
+  <!-- 挂载说明 -->
+  <rect x="130" y="600" width="680" height="44" rx="6" fill="#FFFFFF" stroke="#B0BECC" stroke-dasharray="4 3"/>
+  <text x="470" y="627" text-anchor="middle" font-size="12.5" fill="#5A6A7A">卷挂载：mysql-data（数据） · uploads（附件/导入导出） · redis-data · ./dist（前端产物）</text>
+
+  <!-- ===== 右侧：数据服务器/数据卷 ===== -->
+  <rect x="890" y="196" width="250" height="386" rx="14" fill="#F2F8F8" stroke="#7FB3BD" stroke-width="1.5" stroke-dasharray="8 4" filter="url(#sh2)"/>
+  <text x="1015" y="224" text-anchor="middle" font-size="15" font-weight="bold" fill="#1F4E59">数据（独立数据卷）</text>
+
+  <rect x="920" y="248" width="190" height="96" rx="8" fill="#FFFFFF" stroke="#5E9AA8" stroke-width="1.5"/>
+  <text x="1015" y="280" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F4E59">MySQL 8.0</text>
+  <text x="1015" y="302" text-anchor="middle" font-size="12" fill="#4A7A85">utf8mb4 · InnoDB</text>
+  <text x="1015" y="322" text-anchor="middle" font-size="11" fill="#4A7A85">每日 mysqldump 保留 30 天</text>
+
+  <rect x="920" y="368" width="190" height="84" rx="8" fill="#FFFFFF" stroke="#5E9AA8" stroke-width="1.5"/>
+  <text x="1015" y="392" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F4E59">D:\black-erp\data</text>
+  <text x="1015" y="412" text-anchor="middle" font-size="12" fill="#4A7A85">发票附件 · 产品图片</text>
+  <text x="1015" y="430" text-anchor="middle" font-size="11" fill="#4A7A85">导入源文件 · 导出（7 天清理）</text>
+
+  <rect x="920" y="476" width="190" height="76" rx="8" fill="#FFFFFF" stroke="#5E9AA8" stroke-width="1.5"/>
+  <text x="1015" y="504" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F4E59">备份策略</text>
+  <text x="1015" y="526" text-anchor="middle" font-size="12" fill="#4A7A85">Windows 任务计划程序每日全备</text>
+  <text x="1015" y="543" text-anchor="middle" font-size="11" fill="#4A7A85">robocopy 同步附件目录</text>
+
+  <!-- 服务器到数据的连线 -->
+  <line x1="430" y1="544" x2="470" y2="544" stroke="#2E7D8F" stroke-width="2"/>
+  <line x1="470" y1="544" x2="470" y2="296" stroke="#2E7D8F" stroke-width="2"/>
+  <line x1="470" y1="296" x2="920" y2="296" stroke="#2E7D8F" stroke-width="2" marker-end="url(#arr2b)"/>
+  <line x1="850" y1="410" x2="920" y2="410" stroke="#2E7D8F" stroke-width="2" marker-end="url(#arr2b)"/>
+  <text x="695" y="288" text-anchor="middle" font-size="11.5" fill="#2E7D8F">SQL</text>
+  <text x="885" y="402" text-anchor="middle" font-size="11.5" fill="#2E7D8F">文件 I/O</text>
+
+  <!-- 底部：发布说明 -->
+  <rect x="90" y="690" width="1050" height="60" rx="8" fill="#FFFFFF" stroke="#B0BECC" filter="url(#sh2)"/>
+  <text x="110" y="716" font-size="13" font-weight="bold" fill="#3D4E5F">发布 / 回滚 / 自启</text>
+  <text x="110" y="736" font-size="12" fill="#5A6A7A">前端：替换 dist 卷内容　│　后端：镜像 tag 升级 → compose up -d（Alembic upgrade head 前置）　│　回滚：镜像回退上一 tag（迁移向后兼容一版）　│　自启：Docker Desktop 开机自启 + restart: unless-stopped</text>
+</svg>

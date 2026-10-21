@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="720" viewBox="0 0 1180 720" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <defs>
+    <marker id="arr3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8A98A8"/>
+    </marker>
+    <filter id="sh3" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <rect width="1180" height="720" fill="#FAFBFC"/>
+  <text x="590" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1F2D3D">后端模块结构与依赖图（模块化单体）</text>
+  <text x="590" y="64" text-anchor="middle" font-size="13" fill="#7A8794">依赖方向：api → modules → core/common　│　跨模块禁止写对方 model，只读走虚线</text>
+
+  <!-- api 层 -->
+  <rect x="90" y="96" width="1000" height="70" rx="10" fill="#EAF7EE" stroke="#5FA378" stroke-width="1.5" filter="url(#sh3)"/>
+  <text x="590" y="126" text-anchor="middle" font-size="15" font-weight="bold" fill="#2A6B45">api/　路由层（无业务逻辑）</text>
+  <text x="590" y="150" text-anchor="middle" font-size="12.5" fill="#4A7A60">参数校验 Pydantic · Depends(perm("模块.动作")) 鉴权 · 统一异常 · trace_id · 审计中间件</text>
+
+  <line x1="590" y1="166" x2="590" y2="196" stroke="#5A6A7A" stroke-width="2" marker-end="url(#arr3)"/>
+
+  <!-- modules 容器 -->
+  <rect x="90" y="204" width="1000" height="300" rx="12" fill="#F7FAF8" stroke="#9CBFAE" stroke-width="1.5" stroke-dasharray="8 4"/>
+  <text x="110" y="230" font-size="14" font-weight="bold" fill="#3D6B52">modules/　业务模块（六个平行域）</text>
+
+  <!-- 六模块 -->
+  <g>
+    <rect x="120" y="248" width="300" height="110" rx="8" fill="#FFFFFF" stroke="#5FA378" stroke-width="1.5" filter="url(#sh3)"/>
+    <text x="270" y="276" text-anchor="middle" font-size="14" font-weight="bold" fill="#2A6B45">auth　认证权限</text>
+    <text x="270" y="300" text-anchor="middle" font-size="12" fill="#5A7A68">账号 · 角色 · 模块可见范围</text>
+    <text x="270" y="320" text-anchor="middle" font-size="12" fill="#5A7A68">Session · 权限码「模块.动作」</text>
+    <text x="270" y="342" text-anchor="middle" font-size="11" fill="#8AA396">依赖：core/security</text>
+
+    <rect x="440" y="248" width="300" height="110" rx="8" fill="#FFFFFF" stroke="#5FA378" stroke-width="1.5" filter="url(#sh3)"/>
+    <text x="590" y="276" text-anchor="middle" font-size="14" font-weight="bold" fill="#2A6B45">master　主数据</text>
+    <text x="590" y="300" text-anchor="middle" font-size="12" fill="#5A7A68">Supplier · Spec（编码生成）</text>
+    <text x="590" y="320" text-anchor="middle" font-size="12" fill="#5A7A68">CostPrice 历史 · Shop · ShopProduct</text>
+    <text x="590" y="342" text-anchor="middle" font-size="11" fill="#8AA396">XLSX 固定模板导入 · OCR 预留</text>
+
+    <rect x="760" y="248" width="300" height="110" rx="8" fill="#FFFFFF" stroke="#2A6B45" stroke-width="2.5" filter="url(#sh3)"/>
+    <text x="910" y="276" text-anchor="middle" font-size="14" font-weight="bold" fill="#1B5E38">calc　财务核算 ★ 核心域</text>
+    <text x="910" y="300" text-anchor="middle" font-size="12" fill="#5A7A68">Batch · OrderLine · RegionRule</text>
+    <text x="910" y="320" text-anchor="middle" font-size="12" fill="#5A7A68">匹配引擎 · CSV 解析 · 汇总重算</text>
+    <text x="910" y="342" text-anchor="middle" font-size="11" fill="#8AA396">只读依赖 master / admin.rule</text>
+
+    <rect x="120" y="378" width="300" height="104" rx="8" fill="#FFFFFF" stroke="#5FA378" stroke-width="1.5" filter="url(#sh3)"/>
+    <text x="270" y="406" text-anchor="middle" font-size="14" font-weight="bold" fill="#2A6B45">service　客服</text>
+    <text x="270" y="430" text-anchor="middle" font-size="12" fill="#5A7A68">AftersaleRecord · Invoice</text>
+    <text x="270" y="450" text-anchor="middle" font-size="12" fill="#5A7A68">Reminder 提醒（8 天周期）</text>
+    <text x="270" y="470" text-anchor="middle" font-size="11" fill="#8AA396">只读依赖 master/Supplier</text>
+
+    <rect x="440" y="378" width="300" height="104" rx="8" fill="#FFFFFF" stroke="#5FA378" stroke-width="1.5" filter="url(#sh3)"/>
+    <text x="590" y="406" text-anchor="middle" font-size="14" font-weight="bold" fill="#2A6B45">report　报表</text>
+    <text x="590" y="430" text-anchor="middle" font-size="12" fill="#5A7A68">日报 · 驾驶舱聚合</text>
+    <text x="590" y="450" text-anchor="middle" font-size="12" fill="#5A7A68">XLSX 导出（7 天清理）</text>
+    <text x="590" y="470" text-anchor="middle" font-size="11" fill="#8AA396">只读依赖 calc 聚合结果</text>
+
+    <rect x="760" y="378" width="300" height="104" rx="8" fill="#FFFFFF" stroke="#5FA378" stroke-width="1.5" filter="url(#sh3)"/>
+    <text x="910" y="406" text-anchor="middle" font-size="14" font-weight="bold" fill="#2A6B45">admin　系统管理</text>
+    <text x="910" y="430" text-anchor="middle" font-size="12" fill="#5A7A68">账号 CRUD · 权限覆盖</text>
+    <text x="910" y="450" text-anchor="middle" font-size="12" fill="#5A7A68">RegionRule 附加规则 · AuditLog</text>
+    <text x="910" y="470" text-anchor="middle" font-size="11" fill="#8AA396">被 calc/report 只读引用</text>
+  </g>
+
+  <!-- 跨模块只读虚线 -->
+  <line x1="760" y1="400" x2="740" y2="400" stroke="#8A98A8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="910" y1="358" x2="910" y2="378" stroke="#8A98A8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="590" y="522" text-anchor="middle" font-size="12" fill="#8A98A8">… 跨模块只读引用（虚线）：calc←master/shopproduct·admin/regionrule　│　report←calc　│　service←master/supplier</text>
+
+  <line x1="590" y1="504" x2="590" y2="540" stroke="#5A6A7A" stroke-width="2" marker-end="url(#arr3)"/>
+
+  <!-- core + common -->
+  <rect x="90" y="548" width="490" height="130" rx="10" fill="#E9F4F4" stroke="#5E9AA8" stroke-width="1.5" filter="url(#sh3)"/>
+  <text x="335" y="578" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F4E59">core/　核心设施</text>
+  <text x="335" y="604" text-anchor="middle" font-size="12.5" fill="#4A7A85">配置（pydantic-settings）· DB/Session · 安全（密码/CSRF）</text>
+  <text x="335" y="626" text-anchor="middle" font-size="12.5" fill="#4A7A85">统一异常 · 结构化日志 · 审计中间件 · Celery 实例</text>
+  <text x="335" y="652" text-anchor="middle" font-size="11.5" fill="#7A98A0">所有 modules 依赖 core，core 不依赖 modules</text>
+
+  <rect x="610" y="548" width="480" height="130" rx="10" fill="#E9F4F4" stroke="#5E9AA8" stroke-width="1.5" filter="url(#sh3)"/>
+  <text x="850" y="578" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F4E59">common/　通用工具（无状态纯函数）</text>
+  <text x="850" y="604" text-anchor="middle" font-size="12.5" fill="#4A7A85">csv/xlsx 解析器 · Decimal 金额工具 · spec_code 生成</text>
+  <text x="850" y="626" text-anchor="middle" font-size="12.5" fill="#4A7A85">Storage 抽象（LocalFS/S3）· OcrProvider / NotifyProvider 接口</text>
+  <text x="850" y="652" text-anchor="middle" font-size="11.5" fill="#7A98A0">可被任意 modules 调用 · 可独立单测</text>
+</svg>

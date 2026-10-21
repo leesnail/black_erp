@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="920" viewBox="0 0 1180 920" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5A6A7A"/>
+    </marker>
+    <linearGradient id="gUser" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8F1FD"/><stop offset="1" stop-color="#D5E6F9"/>
+    </linearGradient>
+    <linearGradient id="gGate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF0E3"/><stop offset="1" stop-color="#F9E2C8"/>
+    </linearGradient>
+    <linearGradient id="gApp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAF7EE"/><stop offset="1" stop-color="#D8F0E0"/>
+    </linearGradient>
+    <linearGradient id="gAsync" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3EDFB"/><stop offset="1" stop-color="#E6DBF6"/>
+    </linearGradient>
+    <linearGradient id="gStore" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E9F4F4"/><stop offset="1" stop-color="#D5EAEA"/>
+    </linearGradient>
+    <filter id="sh" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <rect width="1180" height="920" fill="#FAFBFC"/>
+
+  <!-- 标题 -->
+  <text x="590" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1F2D3D">BLACK ERP · 分层架构图</text>
+  <text x="590" y="62" text-anchor="middle" font-size="13" fill="#7A8794">模块化单体 · Windows 本地部署 · 仅 PC 浏览器 · Nginx + FastAPI + Celery + MySQL/Redis</text>
+
+  <!-- ========== L1 用户层 ========== -->
+  <rect x="40" y="90" width="130" height="110" rx="8" fill="#4A7EBB" filter="url(#sh)"/>
+  <text x="105" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">用户层</text>
+  <text x="105" y="165" text-anchor="middle" font-size="12" fill="#DCE8F7">L1</text>
+
+  <rect x="190" y="90" width="950" height="110" rx="10" fill="url(#gUser)" stroke="#9DBBE0" filter="url(#sh)"/>
+  <text x="665" y="118" text-anchor="middle" font-size="13" fill="#3D5A80">PC 浏览器（Chrome / Edge · 分辨率 ≥ 1280×800 · 二期扩展小程序）</text>
+  <!-- 岗位盒子 -->
+  <g font-size="13" text-anchor="middle" fill="#24405F">
+    <rect x="220" y="135" width="120" height="48" rx="6" fill="#FFFFFF" stroke="#7FA3D4"/>
+    <text x="280" y="164">老板 / 管理员</text>
+    <rect x="360" y="135" width="100" height="48" rx="6" fill="#FFFFFF" stroke="#7FA3D4"/>
+    <text x="410" y="164">客服</text>
+    <rect x="480" y="135" width="100" height="48" rx="6" fill="#FFFFFF" stroke="#7FA3D4"/>
+    <text x="530" y="164">采购</text>
+    <rect x="600" y="135" width="100" height="48" rx="6" fill="#FFFFFF" stroke="#7FA3D4"/>
+    <text x="650" y="164">运营</text>
+    <rect x="720" y="135" width="100" height="48" rx="6" fill="#FFFFFF" stroke="#7FA3D4"/>
+    <text x="770" y="164">财务</text>
+    <rect x="850" y="135" width="260" height="48" rx="6" fill="#FFFFFF" stroke="#7FA3D4" stroke-dasharray="4 3"/>
+    <text x="980" y="156" font-size="12" fill="#5A6A7A">Vue3 + TS + Element Plus</text>
+    <text x="980" y="173" font-size="12" fill="#5A6A7A">Pinia · 菜单按权限码裁剪</text>
+  </g>
+
+  <!-- 箭头 L1→L2 -->
+  <line x1="590" y1="200" x2="590" y2="228" stroke="#5A6A7A" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="605" y="220" font-size="12" fill="#5A6A7A">HTTPS / JSON（Session Cookie）</text>
+
+  <!-- ========== L2 接入层 ========== -->
+  <rect x="40" y="236" width="130" height="84" rx="8" fill="#D9822B" filter="url(#sh)"/>
+  <text x="105" y="276" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">接入层</text>
+  <text x="105" y="298" text-anchor="middle" font-size="12" fill="#FBE9D2">L2</text>
+
+  <rect x="190" y="236" width="950" height="84" rx="10" fill="url(#gGate)" stroke="#E0B07A" filter="url(#sh)"/>
+  <rect x="220" y="254" width="380" height="50" rx="6" fill="#FFFFFF" stroke="#D9A05C"/>
+  <text x="410" y="275" text-anchor="middle" font-size="14" font-weight="bold" fill="#8A5316">Nginx</text>
+  <text x="410" y="293" text-anchor="middle" font-size="12" fill="#8A5316">前端静态资源 · HTTPS 终结 · 上传限 50MB</text>
+  <rect x="630" y="254" width="480" height="50" rx="6" fill="#FFFFFF" stroke="#D9A05C"/>
+  <text x="870" y="275" text-anchor="middle" font-size="14" font-weight="bold" fill="#8A5316">反向代理</text>
+  <text x="870" y="293" text-anchor="middle" font-size="12" fill="#8A5316">/ → dist 静态　　/api/* → app:8000</text>
+
+  <!-- 箭头 L2→L3 -->
+  <line x1="590" y1="320" x2="590" y2="348" stroke="#5A6A7A" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="605" y="340" font-size="12" fill="#5A6A7A">HTTP（内网）</text>
+
+  <!-- ========== L3 应用层 ========== -->
+  <rect x="40" y="356" width="130" height="320" rx="8" fill="#3D8B57" filter="url(#sh)"/>
+  <text x="105" y="500" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">应用层</text>
+  <text x="105" y="524" text-anchor="middle" font-size="12" fill="#D4EDE0">L3</text>
+  <text x="105" y="548" text-anchor="middle" font-size="12" fill="#D4EDE0">FastAPI</text>
+  <text x="105" y="566" text-anchor="middle" font-size="12" fill="#D4EDE0">Python 3.12</text>
+
+  <rect x="190" y="356" width="950" height="320" rx="10" fill="url(#gApp)" stroke="#7FB894" filter="url(#sh)"/>
+
+  <!-- API 路由条 -->
+  <rect x="215" y="374" width="900" height="52" rx="6" fill="#FFFFFF" stroke="#5FA378"/>
+  <text x="665" y="396" text-anchor="middle" font-size="14" font-weight="bold" fill="#2A6B45">API 路由层</text>
+  <text x="665" y="414" text-anchor="middle" font-size="12" fill="#4A7A60">参数校验（Pydantic） · Depends 鉴权「模块.动作」 · 统一异常/trace_id</text>
+
+  <!-- 六个业务模块 -->
+  <g font-size="13" text-anchor="middle">
+    <!-- row1 -->
+    <rect x="215" y="442" width="280" height="72" rx="6" fill="#FFFFFF" stroke="#5FA378"/>
+    <text x="355" y="466" font-weight="bold" fill="#2A6B45">auth 认证权限</text>
+    <text x="355" y="486" font-size="11.5" fill="#5A7A68">账号 · 角色 · 模块权限</text>
+    <text x="355" y="502" font-size="11.5" fill="#5A7A68">FR-Auth-01~04</text>
+
+    <rect x="510" y="442" width="280" height="72" rx="6" fill="#FFFFFF" stroke="#5FA378"/>
+    <text x="650" y="466" font-weight="bold" fill="#2A6B45">master 主数据</text>
+    <text x="650" y="486" font-size="11.5" fill="#5A7A68">供应商 · Spec 规格编码 · 价格历史</text>
+    <text x="650" y="502" font-size="11.5" fill="#5A7A68">店铺 · ShopProduct 登记</text>
+
+    <rect x="805" y="442" width="310" height="72" rx="6" fill="#FFFFFF" stroke="#2A6B45" stroke-width="2"/>
+    <text x="960" y="466" font-weight="bold" fill="#1B5E38">calc 财务核算 ★ 核心</text>
+    <text x="960" y="486" font-size="11.5" fill="#5A7A68">CSV 解析 · 匹配引擎 · 成本汇总</text>
+    <text x="960" y="502" font-size="11.5" fill="#5A7A68">Batch / OrderLine / RegionRule</text>
+
+    <!-- row2 -->
+    <rect x="215" y="528" width="280" height="72" rx="6" fill="#FFFFFF" stroke="#5FA378"/>
+    <text x="355" y="552" font-weight="bold" fill="#2A6B45">service 客服</text>
+    <text x="355" y="572" font-size="11.5" fill="#5A7A68">售后 · 发票登记/回传</text>
+    <text x="355" y="588" font-size="11.5" fill="#5A7A68">提醒任务对接</text>
+
+    <rect x="510" y="528" width="280" height="72" rx="6" fill="#FFFFFF" stroke="#5FA378"/>
+    <text x="650" y="552" font-weight="bold" fill="#2A6B45">report 报表</text>
+    <text x="650" y="572" font-size="11.5" fill="#5A7A68">日报 · 驾驶舱聚合</text>
+    <text x="650" y="588" font-size="11.5" fill="#5A7A68">XLSX 导出</text>
+
+    <rect x="805" y="528" width="310" height="72" rx="6" fill="#FFFFFF" stroke="#5FA378"/>
+    <text x="960" y="552" font-weight="bold" fill="#2A6B45">admin 系统管理</text>
+    <text x="960" y="572" font-size="11.5" fill="#5A7A68">账号管理 · 附加成本规则</text>
+    <text x="960" y="588" font-size="11.5" fill="#5A7A68">操作日志</text>
+  </g>
+
+  <!-- 公共能力条 -->
+  <rect x="215" y="614" width="900" height="46" rx="6" fill="#F4FBF6" stroke="#5FA378" stroke-dasharray="5 3"/>
+  <text x="665" y="642" text-anchor="middle" font-size="12.5" fill="#3D6B52">公共能力：csv/xlsx 解析（pandas/openpyxl） · 编码生成器 · Decimal 金额工具 · Storage 抽象 · 审计日志</text>
+
+  <!-- 箭头 L3→L4 -->
+  <line x1="430" y1="676" x2="430" y2="704" stroke="#5A6A7A" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="445" y="696" font-size="12" fill="#5A6A7A">任务入队</text>
+  <line x1="750" y1="676" x2="750" y2="704" stroke="#5A6A7A" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="765" y="696" font-size="12" fill="#5A6A7A">定时投递</text>
+
+  <!-- ========== L4 异步层 ========== -->
+  <rect x="40" y="712" width="130" height="90" rx="8" fill="#7B5EA7" filter="url(#sh)"/>
+  <text x="105" y="754" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">异步层</text>
+  <text x="105" y="776" text-anchor="middle" font-size="12" fill="#E6DBF6">L4</text>
+
+  <rect x="190" y="712" width="950" height="90" rx="10" fill="url(#gAsync)" stroke="#A98FD0" filter="url(#sh)"/>
+  <g font-size="13" text-anchor="middle" fill="#4A3570">
+    <rect x="220" y="730" width="280" height="56" rx="6" fill="#FFFFFF" stroke="#8E6FC0"/>
+    <text x="360" y="753" font-weight="bold">Celery Worker</text>
+    <text x="360" y="772" font-size="11.5" fill="#6A5590">队列 calc / report / reminder · prefetch=1</text>
+    <rect x="520" y="730" width="250" height="56" rx="6" fill="#FFFFFF" stroke="#8E6FC0"/>
+    <text x="645" y="753" font-weight="bold">Celery Beat</text>
+    <text x="645" y="772" font-size="11.5" fill="#6A5590">日报 09:00 · 发票提醒 · 文件清理</text>
+    <rect x="790" y="730" width="320" height="56" rx="6" fill="#FFFFFF" stroke="#8E6FC0"/>
+    <text x="950" y="753" font-weight="bold">复用 modules 业务逻辑</text>
+    <text x="950" y="772" font-size="11.5" fill="#6A5590">匹配引擎纯函数 · 批量写库 · 幂等锁</text>
+  </g>
+
+  <!-- 箭头 L4→L5 -->
+  <line x1="590" y1="802" x2="590" y2="830" stroke="#5A6A7A" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ========== L5 存储层 ========== -->
+  <rect x="40" y="838" width="130" height="66" rx="8" fill="#2E7D8F" filter="url(#sh)"/>
+  <text x="105" y="870" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">存储层</text>
+  <text x="105" y="890" text-anchor="middle" font-size="12" fill="#D2EAF0">L5</text>
+
+  <rect x="190" y="838" width="950" height="66" rx="10" fill="url(#gStore)" stroke="#7FB3BD" filter="url(#sh)"/>
+  <g font-size="13" text-anchor="middle" fill="#1F4E59">
+    <rect x="220" y="850" width="300" height="44" rx="6" fill="#FFFFFF" stroke="#5E9AA8"/>
+    <text x="370" y="868" font-weight="bold">MySQL 8.0</text>
+    <text x="370" y="886" font-size="11.5" fill="#4A7A85">业务数据 · utf8mb4 · 每日 mysqldump</text>
+    <rect x="540" y="850" width="280" height="44" rx="6" fill="#FFFFFF" stroke="#5E9AA8"/>
+    <text x="680" y="868" font-weight="bold">Redis 7</text>
+    <text x="680" y="886" font-size="11.5" fill="#4A7A85">队列 · 会话 · 分布式锁</text>
+    <rect x="840" y="850" width="270" height="44" rx="6" fill="#FFFFFF" stroke="#5E9AA8"/>
+    <text x="975" y="868" font-weight="bold">本地文件存储</text>
+    <text x="975" y="886" font-size="11.5" fill="#4A7A85">附件 · 图片 · 导入导出</text>
+  </g>
+</svg>

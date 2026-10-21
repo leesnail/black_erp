@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="Microsoft YaHei, PingFang SC, sans-serif"><defs><marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#909399"/></marker></defs><rect width="1280" height="720" fill="#FFFFFF"/><text x="640" y="36" font-size="20" fill="#303133" text-anchor="middle" font-weight="bold">FR-Auth 登录与鉴权流程（请求级）</text>
+<rect x="60" y="80" width="180" height="70" rx="8" fill="#fff" stroke="#409EFF" stroke-width="1"/>
+<text x="150" y="111" font-size="14" fill="#409EFF" text-anchor="middle" font-weight="bold">浏览器</text>
+<text x="150" y="131" font-size="11" fill="#909399" text-anchor="middle">POST /auth/login
+账号+密码+验证码</text>
+<rect x="280" y="80" width="180" height="70" rx="8" fill="#fff" stroke="#1B5E38" stroke-width="1"/>
+<text x="370" y="111" font-size="14" fill="#1B5E38" text-anchor="middle" font-weight="bold">FastAPI</text>
+<text x="370" y="131" font-size="11" fill="#909399" text-anchor="middle">verify_password
+bcrypt 比对</text>
+<rect x="500" y="80" width="180" height="70" rx="8" fill="#fff" stroke="#E6A23C" stroke-width="1"/>
+<text x="590" y="111" font-size="14" fill="#E6A23C" text-anchor="middle" font-weight="bold">Redis</text>
+<text x="590" y="131" font-size="11" fill="#909399" text-anchor="middle">SETEX session:{sid}
+uid + perms 快照 TTL 12h</text>
+<rect x="720" y="80" width="180" height="70" rx="8" fill="#fff" stroke="#67C23A" stroke-width="1"/>
+<text x="810" y="111" font-size="14" fill="#67C23A" text-anchor="middle" font-weight="bold">Set-Cookie</text>
+<text x="810" y="131" font-size="11" fill="#909399" text-anchor="middle">sid=...; HttpOnly
+SameSite=Lax; Secure</text>
+<rect x="940" y="80" width="180" height="70" rx="8" fill="#fff" stroke="#06B6D4" stroke-width="1"/>
+<text x="1030" y="111" font-size="14" fill="#06B6D4" text-anchor="middle" font-weight="bold">前端</text>
+<text x="1030" y="131" font-size="11" fill="#909399" text-anchor="middle">Pinia auth 存 perms
+渲染菜单/路由</text>
+<line x1="240" y1="115" x2="280" y2="115" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="460" y1="115" x2="500" y2="115" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="680" y1="115" x2="720" y2="115" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="900" y1="115" x2="940" y2="115" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<text x="640" y="190" font-size="12" fill="#909399" text-anchor="middle">—— 每个业务请求 ——</text>
+<rect x="60" y="220" width="180" height="70" rx="8" fill="#fff" stroke="#409EFF" stroke-width="1"/>
+<text x="150" y="251" font-size="14" fill="#409EFF" text-anchor="middle" font-weight="bold">业务请求</text>
+<text x="150" y="271" font-size="11" fill="#909399" text-anchor="middle">Cookie: sid
+X-CSRF-Token</text>
+<rect x="280" y="220" width="180" height="70" rx="8" fill="#fff" stroke="#D9534F" stroke-width="1"/>
+<text x="370" y="251" font-size="14" fill="#D9534F" text-anchor="middle" font-weight="bold">CSRF 中间件</text>
+<text x="370" y="271" font-size="11" fill="#909399" text-anchor="middle">校验双提交
+不匹配 403</text>
+<rect x="500" y="220" width="180" height="70" rx="8" fill="#fff" stroke="#E6A23C" stroke-width="1"/>
+<text x="590" y="251" font-size="14" fill="#E6A23C" text-anchor="middle" font-weight="bold">Session 依赖</text>
+<text x="590" y="271" font-size="11" fill="#909399" text-anchor="middle">Redis GET session
+失效 401</text>
+<rect x="720" y="220" width="180" height="70" rx="8" fill="#fff" stroke="#1B5E38" stroke-width="1"/>
+<text x="810" y="251" font-size="14" fill="#1B5E38" text-anchor="middle" font-weight="bold">perm 依赖</text>
+<text x="810" y="271" font-size="11" fill="#909399" text-anchor="middle">校验 模块.动作
+in user.perms</text>
+<rect x="940" y="220" width="180" height="70" rx="8" fill="#fff" stroke="#67C23A" stroke-width="1"/>
+<text x="1030" y="251" font-size="14" fill="#67C23A" text-anchor="middle" font-weight="bold">业务 Handler</text>
+<text x="1030" y="271" font-size="11" fill="#909399" text-anchor="middle">序列化过滤
+成本字段裁剪</text>
+<line x1="240" y1="255" x2="280" y2="255" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="460" y1="255" x2="500" y2="255" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="680" y1="255" x2="720" y2="255" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="900" y1="255" x2="940" y2="255" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="60" y="340" width="1160" height="200" rx="10" fill="#F5F7FA" stroke="#E4E7ED" stroke-width="1"/>
+<text x="84" y="372" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">权限码矩阵（模块.动作，种子数据 init_perm_matrix）</text>
+<text x="84" y="402" font-size="12" fill="#909399" text-anchor="start" font-weight="bold">模块</text>
+<text x="260" y="402" font-size="12" fill="#909399" text-anchor="start" font-weight="bold">list/get</text>
+<text x="380" y="402" font-size="12" fill="#909399" text-anchor="start" font-weight="bold">create</text>
+<text x="480" y="402" font-size="12" fill="#909399" text-anchor="start" font-weight="bold">update</text>
+<text x="580" y="402" font-size="12" fill="#909399" text-anchor="start" font-weight="bold">delete</text>
+<text x="680" y="402" font-size="12" fill="#909399" text-anchor="start" font-weight="bold">export</text>
+<text x="800" y="402" font-size="12" fill="#909399" text-anchor="start" font-weight="bold">特殊动作</text>
+<text x="1000" y="402" font-size="12" fill="#909399" text-anchor="start" font-weight="bold">默认写角色</text>
+<text x="84" y="428" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">service</text>
+<text x="260" y="428" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="380" y="428" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="480" y="428" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="580" y="428" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="680" y="428" font-size="11" fill="#606266" text-anchor="start">—</text>
+<text x="800" y="428" font-size="11" fill="#606266" text-anchor="start">invoice.upload</text>
+<text x="1000" y="428" font-size="11" fill="#1B5E38" text-anchor="start">客服</text>
+<text x="84" y="444" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">master.supplier</text>
+<text x="260" y="444" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="380" y="444" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="480" y="444" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="580" y="444" font-size="11" fill="#606266" text-anchor="start">停用</text>
+<text x="680" y="444" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="800" y="444" font-size="11" fill="#606266" text-anchor="start">—</text>
+<text x="1000" y="444" font-size="11" fill="#1B5E38" text-anchor="start">客服/采购</text>
+<text x="84" y="460" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">master.spec</text>
+<text x="260" y="460" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="380" y="460" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="480" y="460" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="580" y="460" font-size="11" fill="#606266" text-anchor="start">停用</text>
+<text x="680" y="460" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="800" y="460" font-size="11" fill="#606266" text-anchor="start">price.write / import</text>
+<text x="1000" y="460" font-size="11" fill="#1B5E38" text-anchor="start">采购</text>
+<text x="84" y="476" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">master.shop_product</text>
+<text x="260" y="476" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="380" y="476" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="480" y="476" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="580" y="476" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="680" y="476" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="800" y="476" font-size="11" fill="#606266" text-anchor="start">—</text>
+<text x="1000" y="476" font-size="11" fill="#1B5E38" text-anchor="start">运营</text>
+<text x="84" y="492" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">calc</text>
+<text x="260" y="492" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="380" y="492" font-size="11" fill="#606266" text-anchor="start">upload</text>
+<text x="480" y="492" font-size="11" fill="#606266" text-anchor="start">—</text>
+<text x="580" y="492" font-size="11" fill="#606266" text-anchor="start">—</text>
+<text x="680" y="492" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="800" y="492" font-size="11" fill="#606266" text-anchor="start">run / recalc / manual_match</text>
+<text x="1000" y="492" font-size="11" fill="#1B5E38" text-anchor="start">财务</text>
+<text x="84" y="508" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">report</text>
+<text x="260" y="508" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="380" y="508" font-size="11" fill="#606266" text-anchor="start">—</text>
+<text x="480" y="508" font-size="11" fill="#606266" text-anchor="start">—</text>
+<text x="580" y="508" font-size="11" fill="#606266" text-anchor="start">—</text>
+<text x="680" y="508" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="800" y="508" font-size="11" fill="#606266" text-anchor="start">—</text>
+<text x="1000" y="508" font-size="11" fill="#1B5E38" text-anchor="start">—（只读）</text>
+<text x="84" y="524" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">admin</text>
+<text x="260" y="524" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="380" y="524" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="480" y="524" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="580" y="524" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="680" y="524" font-size="11" fill="#606266" text-anchor="start">✓</text>
+<text x="800" y="524" font-size="11" fill="#606266" text-anchor="start">perm.assign</text>
+<text x="1000" y="524" font-size="11" fill="#1B5E38" text-anchor="start">管理员</text>
+<text x="640" y="580" font-size="12" fill="#909399" text-anchor="middle">默认角色覆盖见 01-信息架构与权限设计.md §2；管理员可在角色默认之上做个人覆盖</text>
+<text x="640" y="610" font-size="12" fill="#D9534F" text-anchor="middle">前端菜单/按钮按 perms 过滤只是体验；安全边界在 perm 依赖（403）</text>
+</svg>

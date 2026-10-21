@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Microsoft YaHei, PingFang SC, sans-serif"><rect width="1280" height="800" fill="#FFFFFF"/><rect x="0" y="0" width="1280" height="56" rx="0" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="1280" y2="56" stroke="#E4E7ED" stroke-width="1"/>
+<text x="16" y="36" font-size="18" fill="#1B5E38" text-anchor="start" font-weight="bold">BLACK ERP</text>
+<rect x="1058" y="12" width="96" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1072" y="33" font-size="12" fill="#606266" text-anchor="start">消息 3</text>
+<circle cx="1186" cy="28" r="13" fill="#1B5E38"/>
+<text x="1186" y="33" font-size="11" fill="#fff" text-anchor="middle">王</text>
+<text x="1206" y="33" font-size="12" fill="#606266" text-anchor="start">王老板 ▾</text>
+<rect x="0" y="56" width="200" height="744" rx="0" fill="#1F2D3D"/>
+<text x="16" y="84" font-size="11" fill="#8A98A8" text-anchor="start">工作台</text>
+<text x="20" y="109" font-size="12" fill="#C0C4CC" text-anchor="start">工作台</text>
+<text x="16" y="138" font-size="11" fill="#8A98A8" text-anchor="start">客服工作台</text>
+<text x="20" y="163" font-size="12" fill="#C0C4CC" text-anchor="start">售后登记</text>
+<text x="20" y="190" font-size="12" fill="#C0C4CC" text-anchor="start">供应商对接</text>
+<text x="20" y="217" font-size="12" fill="#C0C4CC" text-anchor="start">发票管理</text>
+<text x="16" y="246" font-size="11" fill="#8A98A8" text-anchor="start">成本报价</text>
+<text x="20" y="271" font-size="12" fill="#C0C4CC" text-anchor="start">供应商管理</text>
+<text x="20" y="298" font-size="12" fill="#C0C4CC" text-anchor="start">规格成本表</text>
+<text x="20" y="325" font-size="12" fill="#C0C4CC" text-anchor="start">报价录入</text>
+<text x="20" y="352" font-size="12" fill="#C0C4CC" text-anchor="start">模板导入</text>
+<text x="16" y="381" font-size="11" fill="#8A98A8" text-anchor="start">运营管理</text>
+<text x="20" y="406" font-size="12" fill="#C0C4CC" text-anchor="start">店铺产品登记</text>
+<text x="20" y="433" font-size="12" fill="#C0C4CC" text-anchor="start">成本表(只读)</text>
+<text x="20" y="460" font-size="12" fill="#C0C4CC" text-anchor="start">ROI 计算</text>
+<text x="16" y="489" font-size="11" fill="#8A98A8" text-anchor="start">财务核算</text>
+<text x="20" y="514" font-size="12" fill="#C0C4CC" text-anchor="start">订单上传与计算</text>
+<text x="20" y="541" font-size="12" fill="#C0C4CC" text-anchor="start">计算批次</text>
+<text x="20" y="568" font-size="12" fill="#C0C4CC" text-anchor="start">未匹配处理</text>
+<text x="20" y="595" font-size="12" fill="#C0C4CC" text-anchor="start">经营日报</text>
+<text x="16" y="624" font-size="11" fill="#8A98A8" text-anchor="start">经营驾驶舱</text>
+<text x="20" y="649" font-size="12" fill="#C0C4CC" text-anchor="start">利润总览</text>
+<text x="20" y="676" font-size="12" fill="#C0C4CC" text-anchor="start">日报中心</text>
+<text x="16" y="705" font-size="11" fill="#8A98A8" text-anchor="start">系统管理</text>
+<rect x="6" y="713" width="188" height="25" rx="4" fill="#2A6B45"/>
+<text x="20" y="730" font-size="12" fill="#FFFFFF" text-anchor="start" font-weight="bold">账号管理</text>
+<text x="20" y="757" font-size="12" fill="#C0C4CC" text-anchor="start">角色与权限</text>
+<text x="20" y="784" font-size="12" fill="#C0C4CC" text-anchor="start">附加成本规则</text>
+<text x="20" y="811" font-size="12" fill="#C0C4CC" text-anchor="start">操作日志</text>
+<text x="224" y="96" font-size="18" fill="#303133" text-anchor="start" font-weight="bold">账号管理</text>
+<rect x="1136" y="78" width="120" height="32" rx="4" fill="#1B5E38"/>
+<text x="1196" y="98" font-size="12" fill="#fff" text-anchor="middle">+ 新增账号</text>
+<rect x="224" y="128" width="220" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="148" font-size="12" fill="#909399" text-anchor="start">姓名 / 账号</text>
+<rect x="456" y="128" width="140" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="466" y="148" font-size="12" fill="#303133" text-anchor="start">角色 ▾</text>
+<rect x="608" y="128" width="130" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="618" y="148" font-size="12" fill="#303133" text-anchor="start">状态 ▾</text>
+<rect x="750" y="128" width="72" height="32" rx="4" fill="#1B5E38"/>
+<text x="786" y="148" font-size="12" fill="#fff" text-anchor="middle">查询</text>
+<rect x="224" y="184" width="1032" height="172" rx="0" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<rect x="224" y="184" width="1032" height="36" rx="0" fill="#F5F7FA"/>
+<line x1="224" y1="220" x2="1256" y2="220" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="207" font-size="12" fill="#606266" text-anchor="start">姓名</text>
+<line x1="334" y1="184" x2="334" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="344" y="207" font-size="12" fill="#606266" text-anchor="start">账号</text>
+<line x1="464" y1="184" x2="464" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="474" y="207" font-size="12" fill="#606266" text-anchor="start">角色</text>
+<line x1="564" y1="184" x2="564" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="574" y="207" font-size="12" fill="#606266" text-anchor="start">模块覆盖</text>
+<line x1="774" y1="184" x2="774" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="784" y="207" font-size="12" fill="#606266" text-anchor="start">状态</text>
+<line x1="864" y1="184" x2="864" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="874" y="207" font-size="12" fill="#606266" text-anchor="start">最后登录</text>
+<line x1="1034" y1="184" x2="1034" y2="356" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1044" y="207" font-size="12" fill="#606266" text-anchor="start">操作</text>
+<text x="234" y="242" font-size="12" fill="#303133" text-anchor="start">王老板</text>
+<text x="344" y="242" font-size="12" fill="#303133" text-anchor="start">wang</text>
+<text x="474" y="242" font-size="12" fill="#303133" text-anchor="start">老板</text>
+<text x="574" y="242" font-size="12" fill="#303133" text-anchor="start">无（全默认）</text>
+<text x="784" y="242" font-size="12" fill="#67C23A" text-anchor="start">启用</text>
+<text x="874" y="242" font-size="12" fill="#303133" text-anchor="start">08-20 09:12</text>
+<text x="1044" y="242" font-size="12" fill="#303133" text-anchor="start">编辑 重置密码 停用</text>
+<line x1="224" y1="254" x2="1256" y2="254" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="276" font-size="12" fill="#303133" text-anchor="start">小王</text>
+<text x="344" y="276" font-size="12" fill="#303133" text-anchor="start">xiaowang</text>
+<text x="474" y="276" font-size="12" fill="#303133" text-anchor="start">客服</text>
+<text x="574" y="276" font-size="12" fill="#303133" text-anchor="start">无（全默认）</text>
+<text x="784" y="276" font-size="12" fill="#67C23A" text-anchor="start">启用</text>
+<text x="874" y="276" font-size="12" fill="#303133" text-anchor="start">08-19 18:40</text>
+<text x="1044" y="276" font-size="12" fill="#303133" text-anchor="start">编辑 重置密码 停用</text>
+<line x1="224" y1="288" x2="1256" y2="288" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="310" font-size="12" fill="#303133" text-anchor="start">小财务</text>
+<text x="344" y="310" font-size="12" fill="#303133" text-anchor="start">finance01</text>
+<text x="474" y="310" font-size="12" fill="#303133" text-anchor="start">财务</text>
+<text x="574" y="310" font-size="12" fill="#303133" text-anchor="start">+ 经营驾驶舱(读)</text>
+<text x="784" y="310" font-size="12" fill="#67C23A" text-anchor="start">启用</text>
+<text x="874" y="310" font-size="12" fill="#303133" text-anchor="start">08-20 10:03</text>
+<text x="1044" y="310" font-size="12" fill="#303133" text-anchor="start">编辑 重置密码 停用</text>
+<line x1="224" y1="322" x2="1256" y2="322" stroke="#E4E7ED" stroke-width="1"/>
+<text x="234" y="344" font-size="12" fill="#303133" text-anchor="start">老员工</text>
+<text x="344" y="344" font-size="12" fill="#303133" text-anchor="start">old01</text>
+<text x="474" y="344" font-size="12" fill="#303133" text-anchor="start">采购</text>
+<text x="574" y="344" font-size="12" fill="#303133" text-anchor="start">-</text>
+<text x="784" y="344" font-size="12" fill="#909399" text-anchor="start">停用</text>
+<text x="874" y="344" font-size="12" fill="#303133" text-anchor="start">07-02 11:20</text>
+<text x="1044" y="344" font-size="12" fill="#303133" text-anchor="start">编辑 重置密码 启用</text>
+</svg>

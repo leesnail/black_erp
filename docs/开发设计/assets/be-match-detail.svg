@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="700" viewBox="0 0 1280 700" font-family="Microsoft YaHei, PingFang SC, sans-serif"><defs><marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#909399"/></marker></defs><rect width="1280" height="700" fill="#FFFFFF"/><text x="640" y="36" font-size="20" fill="#303133" text-anchor="middle" font-weight="bold">FR-LINK-01 匹配引擎实现细节（内存纯函数）</text>
+<rect x="40" y="70" width="400" height="580" rx="10" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="64" y="100" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">输入与预处理</text>
+<text x="60" y="132" font-size="13" fill="#606266" text-anchor="start">1. 选购商品 → rsplit(&quot;-&quot;, 1)</text>
+<text x="60" y="156" font-size="13" fill="#606266" text-anchor="start">   → title, spec_text</text>
+<text x="60" y="180" font-size="13" fill="#606266" text-anchor="start">2. title_norm = normalize(title)</text>
+<text x="60" y="204" font-size="13" fill="#606266" text-anchor="start">   去空白/全半角/装饰符</text>
+<text x="60" y="228" font-size="13" fill="#606266" text-anchor="start">3. unit_price ≈ income / qty</text>
+<text x="60" y="252" font-size="13" fill="#606266" text-anchor="start">   容差 Decimal(&quot;0.01&quot;)</text>
+<text x="60" y="276" font-size="13" fill="#303133" text-anchor="start"></text>
+<text x="60" y="300" font-size="13" fill="#606266" text-anchor="start">召回（本店铺启用 ShopProduct）：</text>
+<text x="60" y="324" font-size="13" fill="#606266" text-anchor="start">  kw ⊆ title  OR  title ⊆ kw</text>
+<text x="60" y="348" font-size="13" fill="#606266" text-anchor="start">  倒排：{kw_norm: [sp_id]}</text>
+<text x="60" y="372" font-size="13" fill="#606266" text-anchor="start">  预热一次加载，O(n) 扫描</text>
+<rect x="470" y="70" width="380" height="580" rx="10" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="494" y="100" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">打分函数 score(cand, order)</text>
+<text x="490" y="132" font-size="12" fill="#1B5E38" text-anchor="start">if match_rule_hit(title_norm):</text>
+<text x="490" y="156" font-size="12" fill="#1B5E38" text-anchor="start">    return (0, 0)</text>
+<text x="490" y="180" font-size="12" fill="#1B5E38" text-anchor="start">if spec_text == cand.spec_name</text>
+<text x="490" y="204" font-size="12" fill="#1B5E38" text-anchor="start">   and price_eq(unit, cand.sale):</text>
+<text x="490" y="228" font-size="12" fill="#1B5E38" text-anchor="start">    return (1, 0)</text>
+<text x="490" y="252" font-size="12" fill="#606266" text-anchor="start">hit_len = len(kw ∩ title)</text>
+<text x="490" y="276" font-size="12" fill="#1B5E38" text-anchor="start">if price_eq:</text>
+<text x="490" y="300" font-size="12" fill="#1B5E38" text-anchor="start">    return (2, -hit_len)</text>
+<text x="490" y="324" font-size="12" fill="#1B5E38" text-anchor="start">return (3, -hit_len)</text>
+<text x="490" y="348" font-size="12" fill="#606266" text-anchor="start"></text>
+<text x="490" y="372" font-size="12" fill="#606266" text-anchor="start">排序：sorted by (prio, tie)</text>
+<text x="490" y="396" font-size="12" fill="#606266" text-anchor="start">判定：</text>
+<text x="490" y="420" font-size="12" fill="#1B5E38" text-anchor="start">  best = candidates[0]</text>
+<text x="490" y="444" font-size="12" fill="#1B5E38" text-anchor="start">  unique and best.prio &lt;= 2</text>
+<text x="490" y="468" font-size="12" fill="#1B5E38" text-anchor="start">    → matched=auto, spec_id</text>
+<text x="490" y="492" font-size="12" fill="#1B5E38" text-anchor="start">  else → unmatched + top3 推荐</text>
+<rect x="880" y="70" width="360" height="580" rx="10" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="904" y="100" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">人工指定与沉淀</text>
+<text x="900" y="132" font-size="12" fill="#606266" text-anchor="start">POST /calc/batches/{id}/</text>
+<text x="900" y="156" font-size="12" fill="#606266" text-anchor="start">     manual-match</text>
+<text x="900" y="180" font-size="12" fill="#606266" text-anchor="start">body: {line_ids[], spec_id}</text>
+<text x="900" y="204" font-size="12" fill="#606266" text-anchor="start"></text>
+<text x="900" y="228" font-size="12" fill="#606266" text-anchor="start">事务内：</text>
+<text x="900" y="252" font-size="12" fill="#606266" text-anchor="start">1. OrderLine.spec_id=spec_id</text>
+<text x="900" y="276" font-size="12" fill="#606266" text-anchor="start">   matched=manual</text>
+<text x="900" y="300" font-size="12" fill="#606266" text-anchor="start">2. UPSERT MatchRule</text>
+<text x="900" y="324" font-size="12" fill="#606266" text-anchor="start">   (shop,title_norm,spec_text)</text>
+<text x="900" y="348" font-size="12" fill="#606266" text-anchor="start">3. 回填同文本未匹配行</text>
+<text x="900" y="372" font-size="12" fill="#606266" text-anchor="start">4. 重算受影响行 cost</text>
+<text x="900" y="396" font-size="12" fill="#606266" text-anchor="start">5. UPDATE Batch.stats</text>
+<text x="900" y="420" font-size="12" fill="#606266" text-anchor="start"></text>
+<text x="900" y="444" font-size="12" fill="#606266" text-anchor="start">前端二次确认弹窗说明：</text>
+<text x="900" y="468" font-size="12" fill="#606266" text-anchor="start">&quot;将沉淀为匹配规则，</text>
+<text x="900" y="492" font-size="12" fill="#606266" text-anchor="start"> 后续同文本自动命中&quot;</text>
+</svg>

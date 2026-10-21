@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="860" viewBox="0 0 1280 860" font-family="Microsoft YaHei, PingFang SC, sans-serif"><defs><marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#909399"/></marker></defs><rect width="1280" height="860" fill="#FFFFFF"/><text x="640" y="36" font-size="20" fill="#303133" text-anchor="middle" font-weight="bold">核心数据模型 ER（开发视角，省略附属表）</text>
+<rect x="40" y="80" width="240" height="160" rx="8" fill="#fff" stroke="#67C23A" stroke-width="2"/>
+<rect x="40" y="80" width="240" height="28" rx="8" fill="#67C23A"/>
+<rect x="40" y="96" width="240" height="12" rx="0" fill="#67C23A"/>
+<text x="50" y="100" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">Supplier 供应商</text>
+<text x="52" y="130" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*id PK</text>
+<text x="52" y="150" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*name</text>
+<text x="52" y="170" font-size="11" fill="#606266" text-anchor="start">wechat_group</text>
+<text x="52" y="190" font-size="11" fill="#606266" text-anchor="start">contact_name/phone</text>
+<text x="52" y="210" font-size="11" fill="#606266" text-anchor="start">products</text>
+<text x="52" y="230" font-size="11" fill="#606266" text-anchor="start">status 启用/停用</text>
+<rect x="40" y="260" width="240" height="120" rx="8" fill="#fff" stroke="#06B6D4" stroke-width="2"/>
+<rect x="40" y="260" width="240" height="28" rx="8" fill="#06B6D4"/>
+<rect x="40" y="276" width="240" height="12" rx="0" fill="#06B6D4"/>
+<text x="50" y="280" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">Shop 店铺</text>
+<text x="52" y="310" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*id PK</text>
+<text x="52" y="330" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*name UNIQUE</text>
+<text x="52" y="350" font-size="11" fill="#606266" text-anchor="start">full_name</text>
+<text x="52" y="370" font-size="11" fill="#606266" text-anchor="start">remark</text>
+<rect x="40" y="400" width="240" height="140" rx="8" fill="#fff" stroke="#E6A23C" stroke-width="2"/>
+<rect x="40" y="400" width="240" height="28" rx="8" fill="#E6A23C"/>
+<rect x="40" y="416" width="240" height="12" rx="0" fill="#E6A23C"/>
+<text x="50" y="420" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">RegionRule 地区附加</text>
+<text x="52" y="450" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*id PK</text>
+<text x="52" y="470" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*provinces[]</text>
+<text x="52" y="490" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*amount DECIMAL(6,2)</text>
+<text x="52" y="510" font-size="11" fill="#606266" text-anchor="start">unit=per_piece</text>
+<text x="52" y="530" font-size="11" fill="#606266" text-anchor="start">status</text>
+<rect x="340" y="80" width="260" height="180" rx="8" fill="#fff" stroke="#1B5E38" stroke-width="2"/>
+<rect x="340" y="80" width="260" height="28" rx="8" fill="#1B5E38"/>
+<rect x="340" y="96" width="260" height="12" rx="0" fill="#1B5E38"/>
+<text x="350" y="100" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">Spec 规格 ⭐主键载体</text>
+<text x="352" y="130" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*id PK</text>
+<text x="352" y="150" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*spec_code UNIQUE  SP+6位</text>
+<text x="352" y="170" font-size="11" fill="#606266" text-anchor="start">product_name</text>
+<text x="352" y="190" font-size="11" fill="#606266" text-anchor="start">spec_name</text>
+<text x="352" y="210" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*supplier_id FK</text>
+<text x="352" y="230" font-size="11" fill="#606266" text-anchor="start">image_key</text>
+<text x="352" y="250" font-size="11" fill="#606266" text-anchor="start">status</text>
+<rect x="340" y="300" width="260" height="160" rx="8" fill="#fff" stroke="#1B5E38" stroke-width="2"/>
+<rect x="340" y="300" width="260" height="28" rx="8" fill="#1B5E38"/>
+<rect x="340" y="316" width="260" height="12" rx="0" fill="#1B5E38"/>
+<text x="350" y="320" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">CostPrice 价格历史</text>
+<text x="352" y="350" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*id PK</text>
+<text x="352" y="370" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*spec_id FK</text>
+<text x="352" y="390" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*price DECIMAL(10,2)</text>
+<text x="352" y="410" font-size="11" fill="#606266" text-anchor="start">supplier_id FK</text>
+<text x="352" y="430" font-size="11" fill="#606266" text-anchor="start">effective_at</text>
+<text x="352" y="450" font-size="11" fill="#606266" text-anchor="start">created_by</text>
+<rect x="680" y="80" width="260" height="180" rx="8" fill="#fff" stroke="#409EFF" stroke-width="2"/>
+<rect x="680" y="80" width="260" height="28" rx="8" fill="#409EFF"/>
+<rect x="680" y="96" width="260" height="12" rx="0" fill="#409EFF"/>
+<text x="690" y="100" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">ShopProduct 登记</text>
+<text x="692" y="130" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*id PK</text>
+<text x="692" y="150" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*shop_id FK</text>
+<text x="692" y="170" font-size="11" fill="#606266" text-anchor="start">title_keyword</text>
+<text x="692" y="190" font-size="11" fill="#606266" text-anchor="start">link_id</text>
+<text x="692" y="210" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*spec_id FK 必选</text>
+<text x="692" y="230" font-size="11" fill="#606266" text-anchor="start">sale_price</text>
+<text x="692" y="250" font-size="11" fill="#606266" text-anchor="start">status</text>
+<rect x="680" y="280" width="260" height="160" rx="8" fill="#fff" stroke="#7B61FF" stroke-width="2"/>
+<rect x="680" y="280" width="260" height="28" rx="8" fill="#7B61FF"/>
+<rect x="680" y="296" width="260" height="12" rx="0" fill="#7B61FF"/>
+<text x="690" y="300" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">MatchRule 沉淀</text>
+<text x="692" y="330" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*id PK</text>
+<text x="692" y="350" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*shop_id FK</text>
+<text x="692" y="370" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*title_norm</text>
+<text x="692" y="390" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*spec_text</text>
+<text x="692" y="410" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*spec_id FK</text>
+<text x="692" y="430" font-size="11" fill="#606266" text-anchor="start">created_by</text>
+<rect x="980" y="80" width="260" height="200" rx="8" fill="#fff" stroke="#D9534F" stroke-width="2"/>
+<rect x="980" y="80" width="260" height="28" rx="8" fill="#D9534F"/>
+<rect x="980" y="96" width="260" height="12" rx="0" fill="#D9534F"/>
+<text x="990" y="100" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">Batch 计算批次</text>
+<text x="992" y="130" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*id PK</text>
+<text x="992" y="150" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*shop_id FK</text>
+<text x="992" y="170" font-size="11" fill="#606266" text-anchor="start">period YYYY-MM</text>
+<text x="992" y="190" font-size="11" fill="#606266" text-anchor="start">source_filename</text>
+<text x="992" y="210" font-size="11" fill="#606266" text-anchor="start">source_key</text>
+<text x="992" y="230" font-size="11" fill="#606266" text-anchor="start">status</text>
+<text x="992" y="250" font-size="11" fill="#606266" text-anchor="start">version</text>
+<text x="992" y="270" font-size="11" fill="#606266" text-anchor="start">stats JSON</text>
+<rect x="980" y="320" width="260" height="300" rx="8" fill="#fff" stroke="#D9534F" stroke-width="2"/>
+<rect x="980" y="320" width="260" height="28" rx="8" fill="#D9534F"/>
+<rect x="980" y="336" width="260" height="12" rx="0" fill="#D9534F"/>
+<text x="990" y="340" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">OrderLine 明细行</text>
+<text x="992" y="370" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*id PK</text>
+<text x="992" y="390" font-size="11" fill="#303133" text-anchor="start" font-weight="bold">*batch_id FK</text>
+<text x="992" y="410" font-size="11" fill="#606266" text-anchor="start">order_no</text>
+<text x="992" y="430" font-size="11" fill="#606266" text-anchor="start">raw_product</text>
+<text x="992" y="450" font-size="11" fill="#606266" text-anchor="start">title/spec_text</text>
+<text x="992" y="470" font-size="11" fill="#606266" text-anchor="start">qty</text>
+<text x="992" y="490" font-size="11" fill="#606266" text-anchor="start">province</text>
+<text x="992" y="510" font-size="11" fill="#606266" text-anchor="start">spec_id FK?</text>
+<text x="992" y="530" font-size="11" fill="#606266" text-anchor="start">price_snapshot</text>
+<text x="992" y="550" font-size="11" fill="#606266" text-anchor="start">surcharge</text>
+<text x="992" y="570" font-size="11" fill="#606266" text-anchor="start">line_cost</text>
+<text x="992" y="590" font-size="11" fill="#606266" text-anchor="start">income</text>
+<text x="992" y="610" font-size="11" fill="#606266" text-anchor="start">matched auto/manual/none</text>
+<line x1="280" y1="130" x2="340" y2="130" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="280" y1="300" x2="340" y2="200" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="280" y1="310" x2="680" y2="150" stroke="#06B6D4" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="470" y1="240" x2="470" y2="300" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="600" y1="150" x2="680" y2="150" stroke="#909399" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="600" y1="180" x2="680" y2="330" stroke="#7B61FF" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="810" y1="200" x2="810" y2="280" stroke="#7B61FF" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="940" y1="150" x2="980" y2="150" stroke="#D9534F" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="1110" y1="250" x2="1110" y2="320" stroke="#D9534F" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="280" y1="450" x2="980" y2="200" stroke="#E6A23C" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ah)"/>
+<rect x="40" y="560" width="1200" height="220" rx="10" fill="#F5F7FA" stroke="#E4E7ED" stroke-width="1"/>
+<text x="64" y="592" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">关键约束与实现要点</text>
+<text x="64" y="620" font-size="12" fill="#1B5E38" text-anchor="start" font-weight="bold">· spec_code 生成</text>
+<text x="200" y="620" font-size="12" fill="#606266" text-anchor="start">Redis INCR 序列（key: spec:seq）→ SP%06d；DB 唯一索引兜底；并发安全不依赖 max(code)+1</text>
+<text x="64" y="646" font-size="12" fill="#1B5E38" text-anchor="start" font-weight="bold">· 价格不可变</text>
+<text x="200" y="646" font-size="12" fill="#606266" text-anchor="start">CostPrice 只 INSERT 不 UPDATE；计算取 effective_at≤批次日 的最新一条 → OrderLine 存快照值</text>
+<text x="64" y="672" font-size="12" fill="#1B5E38" text-anchor="start" font-weight="bold">· 批次不可变</text>
+<text x="200" y="672" font-size="12" fill="#606266" text-anchor="start">重算=新 Batch(version+1) 指向同一 source_key；OrderLine 仅 INSERT；未匹配回填只允许非 settled 批次</text>
+<text x="64" y="698" font-size="12" fill="#1B5E38" text-anchor="start" font-weight="bold">· 登记约束</text>
+<text x="200" y="698" font-size="12" fill="#606266" text-anchor="start">ShopProduct 同 (shop_id, title_keyword, sale_price) 唯一；spec 仅能从选择器选入（API 校验 spec_id 存在且启用）</text>
+<text x="64" y="724" font-size="12" fill="#1B5E38" text-anchor="start" font-weight="bold">· 金额类型</text>
+<text x="200" y="724" font-size="12" fill="#606266" text-anchor="start">MySQL DECIMAL(12,2)；SQLAlchemy Numeric；Pydantic condecimal；代码内 Decimal，禁 float</text>
+<text x="64" y="750" font-size="12" fill="#1B5E38" text-anchor="start" font-weight="bold">· 一单多品</text>
+<text x="200" y="750" font-size="12" fill="#606266" text-anchor="start">CSV 一行一个子订单号；选购商品含多条时逐行拆分归集（Q11 逐行归集）</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="860" viewBox="0 0 1280 860" font-family="Microsoft YaHei, PingFang SC, sans-serif"><defs><marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#909399"/></marker></defs><rect width="1280" height="860" fill="#FFFFFF"/><text x="640" y="36" font-size="20" fill="#303133" text-anchor="middle" font-weight="bold">前端工程目录结构（Vue3 + Vite + TS）</text>
+<rect x="40" y="70" width="560" height="760" rx="10" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="60" y="100" font-size="13" fill="#303133" text-anchor="start" font-weight="bold">frontend/</text>
+<text x="60" y="128" font-size="13" fill="#303133" text-anchor="start">├── src/</text>
+<text x="60" y="156" font-size="13" fill="#606266" text-anchor="start">│   ├── api/                  # Axios 封装 + 按模块 API 层</text>
+<text x="60" y="184" font-size="13" fill="#1B5E38" text-anchor="start">│   │   ├── request.ts        # 实例：拦截器/CSRF/401 跳登录</text>
+<text x="60" y="212" font-size="13" fill="#606266" text-anchor="start">│   │   ├── auth.ts  master.ts  service.ts</text>
+<text x="60" y="240" font-size="13" fill="#606266" text-anchor="start">│   │   ├── calc.ts  report.ts  admin.ts</text>
+<text x="60" y="268" font-size="13" fill="#303133" text-anchor="start">│   ├── router/               # 路由 + 守卫</text>
+<text x="60" y="296" font-size="13" fill="#606266" text-anchor="start">│   │   ├── index.ts          # createRouter</text>
+<text x="60" y="324" font-size="13" fill="#1B5E38" text-anchor="start">│   │   ├── guards.ts         # beforeEach: session+perms</text>
+<text x="60" y="352" font-size="13" fill="#606266" text-anchor="start">│   │   └── routes/           # 按模块拆分 route table</text>
+<text x="60" y="380" font-size="13" fill="#303133" text-anchor="start">│   ├── stores/               # Pinia</text>
+<text x="60" y="408" font-size="13" fill="#1B5E38" text-anchor="start">│   │   ├── auth.ts           # user/perms/token</text>
+<text x="60" y="436" font-size="13" fill="#606266" text-anchor="start">│   │   ├── app.ts            # 侧栏折叠/消息角标</text>
+<text x="60" y="464" font-size="13" fill="#1B5E38" text-anchor="start">│   │   └── calc.ts           # 上传向导/轮询状态</text>
+<text x="60" y="492" font-size="13" fill="#303133" text-anchor="start">│   ├── layouts/              # MainLayout 顶栏+侧栏+内容</text>
+<text x="60" y="520" font-size="13" fill="#303133" text-anchor="start">│   ├── views/</text>
+<text x="60" y="548" font-size="13" fill="#606266" text-anchor="start">│   │   ├── workbench/        # 工作台</text>
+<text x="60" y="576" font-size="13" fill="#67C23A" text-anchor="start">│   │   ├── service/          # 售后/发票/供应商对接</text>
+<text x="60" y="604" font-size="13" fill="#E6A23C" text-anchor="start">│   │   ├── master/           # 成本表/供应商/登记/ROI</text>
+<text x="60" y="632" font-size="13" fill="#D9534F" text-anchor="start">│   │   ├── calc/             # 上传/批次/未匹配 ⭐</text>
+<text x="60" y="660" font-size="13" fill="#06B6D4" text-anchor="start">│   │   ├── report/           # 驾驶舱/日报</text>
+<text x="60" y="688" font-size="13" fill="#7B61FF" text-anchor="start">│   │   └── admin/            # 账号/权限/规则/日志</text>
+<text x="60" y="716" font-size="13" fill="#303133" text-anchor="start">│   ├── components/</text>
+<text x="60" y="744" font-size="13" fill="#606266" text-anchor="start">│   │   ├── common/           # SearchBar/PageTable/StatusTag</text>
+<text x="60" y="772" font-size="13" fill="#1B5E38" text-anchor="start">│   │   ├── SpecPicker.vue    # 规格选择器（全局复用）⭐</text>
+<text x="60" y="800" font-size="13" fill="#606266" text-anchor="start">│   │   ├── UploadDropzone.vue</text>
+<text x="60" y="828" font-size="13" fill="#606266" text-anchor="start">│   │   └── ChartCard.vue     # ECharts 封装</text>
+<text x="60" y="856" font-size="13" fill="#303133" text-anchor="start">│   ├── composables/</text>
+<text x="60" y="884" font-size="13" fill="#1B5E38" text-anchor="start">│   │   ├── usePermission.ts  # v-perm 指令/函数</text>
+<text x="60" y="912" font-size="13" fill="#1B5E38" text-anchor="start">│   │   ├── usePolling.ts     # 批次状态轮询</text>
+<text x="60" y="940" font-size="13" fill="#606266" text-anchor="start">│   │   └── useExport.ts      # 导出下载</text>
+<text x="60" y="968" font-size="13" fill="#606266" text-anchor="start">│   ├── utils/                # money/format/validate</text>
+<text x="60" y="996" font-size="13" fill="#606266" text-anchor="start">│   ├── styles/               # 变量/覆盖 EP 主题色</text>
+<text x="60" y="1024" font-size="13" fill="#606266" text-anchor="start">│   ├── App.vue  main.ts</text>
+<text x="60" y="1052" font-size="13" fill="#606266" text-anchor="start">├── vite.config.ts            # proxy /api → :8000</text>
+<text x="60" y="1080" font-size="13" fill="#606266" text-anchor="start">├── .env.development / .env.production</text>
+<text x="60" y="1108" font-size="13" fill="#606266" text-anchor="start">└── package.json</text>
+<rect x="630" y="70" width="610" height="380" rx="10" fill="#EAF7EE" stroke="#1B5E38" stroke-width="1"/>
+<text x="654" y="100" font-size="15" fill="#1B5E38" text-anchor="start" font-weight="bold">关键约定</text>
+<text x="654" y="132" font-size="13" fill="#606266" text-anchor="start">· 路由 name 与权限码模块对齐：/calc/batches → perm calc.list</text>
+<text x="654" y="160" font-size="13" fill="#606266" text-anchor="start">· 所有列表页统一 usePageTable(composable)：</text>
+<text x="654" y="188" font-size="13" fill="#606266" text-anchor="start">  { query, total, rows, loading, search, reset, refresh }</text>
+<text x="654" y="216" font-size="13" fill="#606266" text-anchor="start">· 金额展示统一 fmtMoney(v) → ¥1,234.56；</text>
+<text x="654" y="244" font-size="13" fill="#606266" text-anchor="start">  输入用 el-input-number :precision=&quot;2&quot; :step=&quot;0.01&quot;</text>
+<text x="654" y="272" font-size="13" fill="#606266" text-anchor="start">· 状态徽标统一 &lt;StatusTag type=&quot;ok|warn|danger|info&quot;&gt;</text>
+<text x="654" y="300" font-size="13" fill="#606266" text-anchor="start">· 按钮级权限：&lt;el-button v-perm=&quot;&#x27;calc.upload&quot;&quot;&gt;</text>
+<text x="654" y="328" font-size="13" fill="#606266" text-anchor="start">· 请求取消：列表切换路由时 AbortController</text>
+<text x="654" y="356" font-size="13" fill="#606266" text-anchor="start">· 大表格（&gt;2000 行）切 vxe-table 虚拟滚动</text>
+<rect x="630" y="470" width="610" height="360" rx="10" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="654" y="500" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">依赖清单（package.json 核心）</text>
+<text x="654" y="532" font-size="13" fill="#303133" text-anchor="start">· vue@3.4+ / vue-router@4 / pinia</text>
+<text x="1100" y="532" font-size="12" fill="#909399" text-anchor="start">框架</text>
+<text x="654" y="562" font-size="13" fill="#303133" text-anchor="start">· element-plus@2.x / @element-plus/icons-vue</text>
+<text x="1100" y="562" font-size="12" fill="#909399" text-anchor="start">UI</text>
+<text x="654" y="592" font-size="13" fill="#303133" text-anchor="start">· axios@1.x</text>
+<text x="1100" y="592" font-size="12" fill="#909399" text-anchor="start">请求</text>
+<text x="654" y="622" font-size="13" fill="#303133" text-anchor="start">· echarts@5</text>
+<text x="1100" y="622" font-size="12" fill="#909399" text-anchor="start">驾驶舱图表</text>
+<text x="654" y="652" font-size="13" fill="#303133" text-anchor="start">· vxe-table@4（可选）</text>
+<text x="1100" y="652" font-size="12" fill="#909399" text-anchor="start">万行明细虚拟滚动</text>
+<text x="654" y="682" font-size="13" fill="#303133" text-anchor="start">· dayjs</text>
+<text x="1100" y="682" font-size="12" fill="#909399" text-anchor="start">时间</text>
+<text x="654" y="712" font-size="13" fill="#303133" text-anchor="start">· @vueuse/core</text>
+<text x="1100" y="712" font-size="12" fill="#909399" text-anchor="start">工具</text>
+<text x="654" y="742" font-size="13" fill="#303133" text-anchor="start">· typescript@5 / vite@5 / sass</text>
+<text x="1100" y="742" font-size="12" fill="#909399" text-anchor="start">工程</text>
+<text x="654" y="772" font-size="13" fill="#303133" text-anchor="start">· eslint + prettier + @vue/eslint-config-typescript</text>
+<text x="1100" y="772" font-size="12" fill="#909399" text-anchor="start">规范</text>
+</svg>

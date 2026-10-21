@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900" font-family="Microsoft YaHei, PingFang SC, sans-serif"><defs><marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#909399"/></marker></defs><rect width="1280" height="900" fill="#FFFFFF"/><text x="640" y="40" font-size="20" fill="#303133" text-anchor="middle" font-weight="bold">后端 API 端点地图（FastAPI Router 按模块）</text>
+<text x="640" y="66" font-size="12" fill="#909399" text-anchor="middle">前缀统一 /api/v1 · 鉴权依赖注入 · 只读接口对无权限角色不返回敏感字段</text>
+<rect x="40" y="100" width="300" height="150" rx="10" fill="#fff" stroke="#409EFF" stroke-width="2"/>
+<rect x="40" y="100" width="300" height="30" rx="10" fill="#409EFF"/>
+<rect x="40" y="118" width="300" height="12" rx="0" fill="#409EFF"/>
+<text x="52" y="121" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">auth  /api/v1/auth</text>
+<text x="56" y="152" font-size="12" fill="#606266" text-anchor="start">POST /login</text>
+<text x="56" y="178" font-size="12" fill="#606266" text-anchor="start">POST /logout</text>
+<text x="56" y="204" font-size="12" fill="#606266" text-anchor="start">GET /me</text>
+<text x="56" y="230" font-size="12" fill="#606266" text-anchor="start">POST /change-password</text>
+<rect x="40" y="280" width="300" height="176" rx="10" fill="#fff" stroke="#7B61FF" stroke-width="2"/>
+<rect x="40" y="280" width="300" height="30" rx="10" fill="#7B61FF"/>
+<rect x="40" y="298" width="300" height="12" rx="0" fill="#7B61FF"/>
+<text x="52" y="301" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">admin  /api/v1/admin</text>
+<text x="56" y="332" font-size="12" fill="#606266" text-anchor="start">GET/POST /accounts</text>
+<text x="56" y="358" font-size="12" fill="#606266" text-anchor="start">GET/PATCH /roles</text>
+<text x="56" y="384" font-size="12" fill="#606266" text-anchor="start">GET /perm-matrix</text>
+<text x="56" y="410" font-size="12" fill="#606266" text-anchor="start">CRUD /region-rules</text>
+<text x="56" y="436" font-size="12" fill="#606266" text-anchor="start">GET /audit-logs</text>
+<rect x="360" y="100" width="300" height="150" rx="10" fill="#fff" stroke="#67C23A" stroke-width="2"/>
+<rect x="360" y="100" width="300" height="30" rx="10" fill="#67C23A"/>
+<rect x="360" y="118" width="300" height="12" rx="0" fill="#67C23A"/>
+<text x="372" y="121" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">service  /api/v1/service</text>
+<text x="376" y="152" font-size="12" fill="#606266" text-anchor="start">CRUD /aftersales</text>
+<text x="376" y="178" font-size="12" fill="#606266" text-anchor="start">CRUD /invoices</text>
+<text x="376" y="204" font-size="12" fill="#606266" text-anchor="start">POST /invoices/{id}/attachments</text>
+<text x="376" y="230" font-size="12" fill="#606266" text-anchor="start">GET /reminders</text>
+<rect x="360" y="280" width="300" height="228" rx="10" fill="#fff" stroke="#E6A23C" stroke-width="2"/>
+<rect x="360" y="280" width="300" height="30" rx="10" fill="#E6A23C"/>
+<rect x="360" y="298" width="300" height="12" rx="0" fill="#E6A23C"/>
+<text x="372" y="301" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">master  /api/v1/master</text>
+<text x="376" y="332" font-size="12" fill="#606266" text-anchor="start">CRUD /suppliers</text>
+<text x="376" y="358" font-size="12" fill="#606266" text-anchor="start">CRUD /specs</text>
+<text x="376" y="384" font-size="12" fill="#606266" text-anchor="start">POST /specs/{id}/price</text>
+<text x="376" y="410" font-size="12" fill="#606266" text-anchor="start">POST /specs/import-xlsx</text>
+<text x="376" y="436" font-size="12" fill="#606266" text-anchor="start">GET /spec-picker</text>
+<text x="376" y="462" font-size="12" fill="#606266" text-anchor="start">CRUD /shop-products</text>
+<text x="376" y="488" font-size="12" fill="#606266" text-anchor="start">CRUD /shops</text>
+<rect x="700" y="100" width="300" height="228" rx="10" fill="#fff" stroke="#D9534F" stroke-width="2"/>
+<rect x="700" y="100" width="300" height="30" rx="10" fill="#D9534F"/>
+<rect x="700" y="118" width="300" height="12" rx="0" fill="#D9534F"/>
+<text x="712" y="121" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">calc  /api/v1/calc</text>
+<text x="716" y="152" font-size="12" fill="#606266" text-anchor="start">POST /batches  (202)</text>
+<text x="716" y="178" font-size="12" fill="#606266" text-anchor="start">GET /batches</text>
+<text x="716" y="204" font-size="12" fill="#606266" text-anchor="start">GET /batches/{id}</text>
+<text x="716" y="230" font-size="12" fill="#606266" text-anchor="start">GET /batches/{id}/summary|lines|unmatched</text>
+<text x="716" y="256" font-size="12" fill="#606266" text-anchor="start">POST /batches/{id}/recalc</text>
+<text x="716" y="282" font-size="12" fill="#606266" text-anchor="start">POST /batches/{id}/manual-match</text>
+<text x="716" y="308" font-size="12" fill="#606266" text-anchor="start">GET /preview</text>
+<rect x="700" y="300" width="300" height="150" rx="10" fill="#fff" stroke="#06B6D4" stroke-width="2"/>
+<rect x="700" y="300" width="300" height="30" rx="10" fill="#06B6D4"/>
+<rect x="700" y="318" width="300" height="12" rx="0" fill="#06B6D4"/>
+<text x="712" y="321" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">report  /api/v1/report</text>
+<text x="716" y="352" font-size="12" fill="#606266" text-anchor="start">GET /daily-reports</text>
+<text x="716" y="378" font-size="12" fill="#606266" text-anchor="start">GET /cockpit/overview</text>
+<text x="716" y="404" font-size="12" fill="#606266" text-anchor="start">GET /cockpit/trend</text>
+<text x="716" y="430" font-size="12" fill="#606266" text-anchor="start">GET /exports/{tab}</text>
+<rect x="40" y="520" width="300" height="90" rx="10" fill="#fff" stroke="#1B5E38" stroke-width="2"/>
+<rect x="40" y="520" width="300" height="30" rx="10" fill="#1B5E38"/>
+<rect x="40" y="538" width="300" height="12" rx="0" fill="#1B5E38"/>
+<text x="52" y="541" font-size="13" fill="#fff" text-anchor="start" font-weight="bold">report  /api/v1/roi</text>
+<text x="56" y="574" font-size="12" fill="#606266" text-anchor="start">POST /roi-records</text>
+<text x="56" y="594" font-size="12" fill="#606266" text-anchor="start">GET /roi-records</text>
+<rect x="700" y="500" width="500" height="130" rx="10" fill="#EAF7EE" stroke="#1B5E38" stroke-width="1.5"/>
+<text x="720" y="528" font-size="14" fill="#1B5E38" text-anchor="start" font-weight="bold">通用约定</text>
+<text x="720" y="554" font-size="12" fill="#606266" text-anchor="start">· 登录后 Cookie Session（HttpOnly）；写操作需 X-CSRF-Token</text>
+<text x="720" y="574" font-size="12" fill="#606266" text-anchor="start">· 鉴权：Depends(perm(&quot;模块.动作&quot;))，未授权 403</text>
+<text x="720" y="594" font-size="12" fill="#606266" text-anchor="start">· 金额字段 JSON 序列化为字符串（防浮点误差）</text>
+<text x="720" y="614" font-size="12" fill="#606266" text-anchor="start">· 列表接口统一 {items, total, page, page_size}</text>
+<text x="720" y="634" font-size="12" fill="#606266" text-anchor="start">· 文件上传走 multipart，单文件 ≤ 50MB</text>
+</svg>

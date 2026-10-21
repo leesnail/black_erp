@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="Microsoft YaHei, PingFang SC, sans-serif"><rect width="1280" height="800" fill="#FFFFFF"/><rect x="0" y="0" width="1280" height="56" rx="0" fill="#FFFFFF"/>
+<line x1="0" y1="56" x2="1280" y2="56" stroke="#E4E7ED" stroke-width="1"/>
+<text x="16" y="36" font-size="18" fill="#1B5E38" text-anchor="start" font-weight="bold">BLACK ERP</text>
+<rect x="1058" y="12" width="96" height="32" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1072" y="33" font-size="12" fill="#606266" text-anchor="start">消息 3</text>
+<circle cx="1186" cy="28" r="13" fill="#1B5E38"/>
+<text x="1186" y="33" font-size="11" fill="#fff" text-anchor="middle">王</text>
+<text x="1206" y="33" font-size="12" fill="#606266" text-anchor="start">王老板 ▾</text>
+<rect x="0" y="56" width="200" height="744" rx="0" fill="#1F2D3D"/>
+<text x="16" y="84" font-size="11" fill="#8A98A8" text-anchor="start">工作台</text>
+<text x="20" y="109" font-size="12" fill="#C0C4CC" text-anchor="start">工作台</text>
+<text x="16" y="138" font-size="11" fill="#8A98A8" text-anchor="start">客服工作台</text>
+<text x="20" y="163" font-size="12" fill="#C0C4CC" text-anchor="start">售后登记</text>
+<text x="20" y="190" font-size="12" fill="#C0C4CC" text-anchor="start">供应商对接</text>
+<text x="20" y="217" font-size="12" fill="#C0C4CC" text-anchor="start">发票管理</text>
+<text x="16" y="246" font-size="11" fill="#8A98A8" text-anchor="start">成本报价</text>
+<text x="20" y="271" font-size="12" fill="#C0C4CC" text-anchor="start">供应商管理</text>
+<text x="20" y="298" font-size="12" fill="#C0C4CC" text-anchor="start">规格成本表</text>
+<text x="20" y="325" font-size="12" fill="#C0C4CC" text-anchor="start">报价录入</text>
+<text x="20" y="352" font-size="12" fill="#C0C4CC" text-anchor="start">模板导入</text>
+<text x="16" y="381" font-size="11" fill="#8A98A8" text-anchor="start">运营管理</text>
+<text x="20" y="406" font-size="12" fill="#C0C4CC" text-anchor="start">店铺产品登记</text>
+<text x="20" y="433" font-size="12" fill="#C0C4CC" text-anchor="start">成本表(只读)</text>
+<text x="20" y="460" font-size="12" fill="#C0C4CC" text-anchor="start">ROI 计算</text>
+<text x="16" y="489" font-size="11" fill="#8A98A8" text-anchor="start">财务核算</text>
+<rect x="6" y="497" width="188" height="25" rx="4" fill="#2A6B45"/>
+<text x="20" y="514" font-size="12" fill="#FFFFFF" text-anchor="start" font-weight="bold">订单上传与计算</text>
+<text x="20" y="541" font-size="12" fill="#C0C4CC" text-anchor="start">计算批次</text>
+<text x="20" y="568" font-size="12" fill="#C0C4CC" text-anchor="start">未匹配处理</text>
+<text x="20" y="595" font-size="12" fill="#C0C4CC" text-anchor="start">经营日报</text>
+<text x="16" y="624" font-size="11" fill="#8A98A8" text-anchor="start">经营驾驶舱</text>
+<text x="20" y="649" font-size="12" fill="#C0C4CC" text-anchor="start">利润总览</text>
+<text x="20" y="676" font-size="12" fill="#C0C4CC" text-anchor="start">日报中心</text>
+<text x="16" y="705" font-size="11" fill="#8A98A8" text-anchor="start">系统管理</text>
+<text x="20" y="730" font-size="12" fill="#C0C4CC" text-anchor="start">账号管理</text>
+<text x="20" y="757" font-size="12" fill="#C0C4CC" text-anchor="start">角色与权限</text>
+<text x="20" y="784" font-size="12" fill="#C0C4CC" text-anchor="start">附加成本规则</text>
+<text x="20" y="811" font-size="12" fill="#C0C4CC" text-anchor="start">操作日志</text>
+<text x="224" y="96" font-size="18" fill="#303133" text-anchor="start" font-weight="bold">订单成本核算</text>
+<circle cx="236" cy="140" r="12" fill="#1B5E38"/>
+<text x="236" y="144" font-size="11" fill="#fff" text-anchor="middle">1</text>
+<text x="256" y="144" font-size="13" fill="#1B5E38" text-anchor="start">上传</text>
+<line x1="250" y1="140" x2="412" y2="140" stroke="#1B5E38" stroke-width="2"/>
+<circle cx="426" cy="140" r="12" fill="#1B5E38"/>
+<text x="426" y="144" font-size="11" fill="#fff" text-anchor="middle">2</text>
+<text x="446" y="144" font-size="13" fill="#1B5E38" text-anchor="start" font-weight="bold">预检</text>
+<line x1="440" y1="140" x2="602" y2="140" stroke="#E4E7ED" stroke-width="2"/>
+<circle cx="616" cy="140" r="12" fill="#fff" stroke="#E4E7ED"/>
+<text x="616" y="144" font-size="11" fill="#909399" text-anchor="middle">3</text>
+<text x="636" y="144" font-size="13" fill="#909399" text-anchor="start">计算</text>
+<line x1="630" y1="140" x2="792" y2="140" stroke="#E4E7ED" stroke-width="2"/>
+<circle cx="806" cy="140" r="12" fill="#fff" stroke="#E4E7ED"/>
+<text x="806" y="144" font-size="11" fill="#909399" text-anchor="middle">4</text>
+<text x="826" y="144" font-size="13" fill="#909399" text-anchor="start">结果</text>
+<rect x="224" y="180" width="1032" height="84" rx="8" fill="#F5F7FA" stroke="#E4E7ED" stroke-width="1"/>
+<text x="740" y="214" font-size="14" fill="#303133" text-anchor="middle">📄  已选择：誉恒8月份.csv（2.1MB）</text>
+<text x="740" y="242" font-size="12" fill="#67C23A" text-anchor="middle">文件名自动识别店铺：誉恒</text>
+<text x="224" y="306" font-size="15" fill="#303133" text-anchor="start" font-weight="bold">预检报告</text>
+<rect x="224" y="320" width="1032" height="132" rx="8" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="264" y="372" font-size="30" fill="#303133" text-anchor="start" font-weight="bold">1521</text>
+<text x="264" y="400" font-size="12" fill="#909399" text-anchor="start">总行数</text>
+<text x="464" y="372" font-size="30" fill="#303133" text-anchor="start" font-weight="bold">1045</text>
+<text x="464" y="400" font-size="12" fill="#909399" text-anchor="start">可计算</text>
+<text x="664" y="372" font-size="30" fill="#303133" text-anchor="start" font-weight="bold">476</text>
+<text x="664" y="400" font-size="12" fill="#909399" text-anchor="start">无物流跳过</text>
+<text x="864" y="372" font-size="30" fill="#303133" text-anchor="start" font-weight="bold">58</text>
+<text x="864" y="400" font-size="12" fill="#909399" text-anchor="start">售后单</text>
+<text x="1064" y="372" font-size="30" fill="#E6A23C" text-anchor="start" font-weight="bold">12</text>
+<text x="1064" y="400" font-size="12" fill="#909399" text-anchor="start">预计未匹配</text>
+<text x="264" y="434" font-size="12" fill="#606266" text-anchor="start">售后单计入成本，仅在汇总表展示；[预览未匹配样本]</text>
+<rect x="224" y="480" width="1032" height="56" rx="8" fill="#EAF7EE" stroke="#1B5E38" stroke-width="1"/>
+<text x="244" y="514" font-size="13" fill="#2A6B45" text-anchor="start">计算口径：有物流才计成本 · 售后仍计采购成本 · 地区附加按件计（+4 / +20）</text>
+<rect x="1126" y="570" width="130" height="40" rx="4" fill="#1B5E38"/>
+<text x="1191" y="594" font-size="12" fill="#fff" text-anchor="middle">确认计算</text>
+<rect x="1130" y="570" width="110" height="40" rx="4" fill="#fff" stroke="#E4E7ED" stroke-width="1"/>
+<text x="1185" y="594" font-size="12" fill="#606266" text-anchor="middle">重新上传</text>
+</svg>

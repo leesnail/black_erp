@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+*.local
+
+# Data
+data/
+uploads/
+*.log
+backup/
+
+# Local binaries / tunnel client
+*.exe
+deploy/scripts/run_natapp.local.bat
+
+# Local business files at repo root
+/*.docx
+/*.csv
+/audit
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+
+# Docker volumes (named, but keep seed)
+mysql_data/
